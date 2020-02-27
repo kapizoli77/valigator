@@ -43,6 +43,8 @@
 		5FAD698E2407201C00D0EB06 /* String+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD698D2407201C00D0EB06 /* String+Exts.swift */; };
 		5FAD69902407205C00D0EB06 /* Optional+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD698F2407205C00D0EB06 /* Optional+Exts.swift */; };
 		5FAD69922407217A00D0EB06 /* Collection+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD69912407217A00D0EB06 /* Collection+Exts.swift */; };
+		5FAD69F92407BC1000D0EB06 /* FieldValueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD69F72407BC1000D0EB06 /* FieldValueManager.swift */; };
+		5FAD69FA2407BC1000D0EB06 /* FieldValueManagerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD69F82407BC1000D0EB06 /* FieldValueManagerEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		5FAD698D2407201C00D0EB06 /* String+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Exts.swift"; sourceTree = "<group>"; };
 		5FAD698F2407205C00D0EB06 /* Optional+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Exts.swift"; sourceTree = "<group>"; };
 		5FAD69912407217A00D0EB06 /* Collection+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Exts.swift"; sourceTree = "<group>"; };
+		5FAD69F72407BC1000D0EB06 /* FieldValueManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValueManager.swift; sourceTree = "<group>"; };
+		5FAD69F82407BC1000D0EB06 /* FieldValueManagerEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValueManagerEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 				5FAD696624071C6F00D0EB06 /* FormValidators */,
 				5FAD695424071C6F00D0EB06 /* InputRules */,
 				5FAD695024071C6F00D0EB06 /* Services */,
+				5FAD69F62407BBF900D0EB06 /* FieldValueManager */,
 				5FAD69342407198900D0EB06 /* Valigator.h */,
 				5FAD69352407198900D0EB06 /* Info.plist */,
 			);
@@ -223,6 +228,15 @@
 				5FAD69912407217A00D0EB06 /* Collection+Exts.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5FAD69F62407BBF900D0EB06 /* FieldValueManager */ = {
+			isa = PBXGroup;
+			children = (
+				5FAD69F72407BC1000D0EB06 /* FieldValueManager.swift */,
+				5FAD69F82407BC1000D0EB06 /* FieldValueManagerEntity.swift */,
+			);
+			path = FieldValueManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +366,7 @@
 				5FAD698624071C6F00D0EB06 /* BaseFormValidator.swift in Sources */,
 				5FAD698524071C6F00D0EB06 /* EndOfFieldFormValidator.swift in Sources */,
 				5FAD69922407217A00D0EB06 /* Collection+Exts.swift in Sources */,
+				5FAD69F92407BC1000D0EB06 /* FieldValueManager.swift in Sources */,
 				5FAD697524071C6F00D0EB06 /* RegexInputRule.swift in Sources */,
 				5FAD697C24071C6F00D0EB06 /* RequiredObjectInputRule.swift in Sources */,
 				5FAD698B24071C6F00D0EB06 /* FormValidatorProtocol.swift in Sources */,
@@ -363,6 +378,7 @@
 				5FAD697224071C6F00D0EB06 /* ValidationService.swift in Sources */,
 				5FAD697824071C6F00D0EB06 /* CharacterRangeInputRule.swift in Sources */,
 				5FAD697024071C6F00D0EB06 /* FieldValidator.swift in Sources */,
+				5FAD69FA2407BC1000D0EB06 /* FieldValueManagerEntity.swift in Sources */,
 				5FAD696E24071C6F00D0EB06 /* FieldValidationEntity.swift in Sources */,
 				5FAD697724071C6F00D0EB06 /* RequiredStringInputRule.swift in Sources */,
 				5FAD696F24071C6F00D0EB06 /* FieldValidationProtocol.swift in Sources */,

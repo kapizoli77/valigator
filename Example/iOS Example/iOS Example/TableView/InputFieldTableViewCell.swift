@@ -13,16 +13,25 @@ class InputFieldTableViewCell: UITableViewCell {
 
     @IBOutlet private var title: UILabel!
     @IBOutlet private var textField: UITextField!
+    @IBOutlet private var errorLabel: UILabel!
     private var viewModel: TableViewCellViewModel? {
         didSet {
             guard let viewModel = viewModel else {
                 title.text = nil
                 textField.text = nil
+                errorLabel.isHidden = true
                 return
             }
 
             title.text = viewModel.title
             textField.text = viewModel.textProvider(viewModel.identifier)
+            if case CellErrorState.show(let errorText) = viewModel.errorState {
+                errorLabel.isHidden = false
+                errorLabel.text = errorText
+            } else {
+                errorLabel.isHidden = true
+            }
+
         }
     }
 
@@ -33,6 +42,7 @@ class InputFieldTableViewCell: UITableViewCell {
 
         title.text = nil
         textField.text = nil
+        errorLabel.isHidden = true
     }
 
     // MARK: - Functions
@@ -44,13 +54,25 @@ class InputFieldTableViewCell: UITableViewCell {
     @IBAction func textFieldDidChange(_ textField: UITextField) {
         guard let viewModel = viewModel else { return }
 
-        viewModel.fieldChangeHandler(textField.text, viewModel.identifier, textField.isFirstResponder)
+        viewModel.fieldChangeHandler(textField.text, viewModel.identifier, true)
     }
 }
 
 // MARK: - UITextFieldDelegate
 
 extension InputFieldTableViewCell: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        guard let viewModel = viewModel else { return }
+
+        viewModel.fieldChangeHandler(textField.text, viewModel.identifier, true)
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let viewModel = viewModel else { return }
+
+        viewModel.fieldChangeHandler(textField.text, viewModel.identifier, false)
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.endEditing(true)
         return true

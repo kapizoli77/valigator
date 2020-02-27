@@ -82,7 +82,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7mk-FU-djK">
-                                                            <rect key="frame" x="0.0" y="29" width="374" height="48"/>
+                                                            <rect key="frame" x="0.0" y="29" width="374" height="19"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="34" id="cE2-0o-Tco"/>
                                                             </constraints>
@@ -93,6 +93,15 @@
                                                                 <outlet property="delegate" destination="ZFd-Mu-4sk" id="ggN-YP-d1Y"/>
                                                             </connections>
                                                         </textField>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfZ-14-8aN">
+                                                            <rect key="frame" x="0.0" y="56" width="374" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="Z2Q-so-ioD"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -104,6 +113,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="errorLabel" destination="CfZ-14-8aN" id="dfy-f7-jX3"/>
                                             <outlet property="textField" destination="7mk-FU-djK" id="PSp-dA-YRn"/>
                                             <outlet property="title" destination="qcd-Gb-5YH" id="siF-1a-fMC"/>
                                         </connections>

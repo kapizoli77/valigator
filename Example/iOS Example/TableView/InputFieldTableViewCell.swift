@@ -28,7 +28,6 @@ class InputFieldTableViewCell: UITableViewCell {
             } else {
                 errorLabel.isHidden = true
             }
-
         }
     }
 

@@ -23,7 +23,6 @@ class TableViewController: UIViewController {
         self.fieldValueManager.setValue(value, for: fieldId)
         self.valigator.editStateDidChanged(fieldId: fieldId, isActive: isActive)
     }
-    
 
     // UIViewController functions
 
@@ -95,16 +94,15 @@ extension TableViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension TableViewController: UITableViewDelegate {
-
-}
+extension TableViewController: UITableViewDelegate {}
 
 // MARK: - ValigatorDelegate
 
 extension TableViewController: ValigatorDelegate {
     func fieldValidationDidEnd(fieldId: Int, success: Bool, validationRuleResults: [ValidationRuleResult]) {
-        // Here we can implement how to handle if more than 1 rule gives us validation error, for example get the first message (validationRuleResults array contains all rule's result, valid and invalid too)
-        let errorMessage = validationRuleResults.first(where: { !$0.passed } )?.message
+        // Here we can implement how to handle if more than 1 rule gives us validation error,
+        // for example get the first message (validationRuleResults array contains all rule's result, valid and invalid too)
+        let errorMessage = validationRuleResults.first(where: { !$0.passed })?.message
 
         let cellErrorState: CellErrorState
         if !success, let errorMessage = errorMessage {

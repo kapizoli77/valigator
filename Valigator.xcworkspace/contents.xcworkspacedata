@@ -5,6 +5,6 @@
       location = "group:Valigator.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Example/iOS Example/iOS Example.xcodeproj">
+      location = "group:Example/iOS Example.xcodeproj">
    </FileRef>
 </Workspace>

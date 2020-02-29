@@ -45,7 +45,7 @@ public protocol ValigatorProtocol {
      * returns: true if the registration was successful, otherwise false
      */
     func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>,
-                                             before beforeId: Int) -> Bool where ValidationRule.InputType == InputType
+                                                  before beforeId: Int) -> Bool where ValidationRule.InputType == InputType
     /**
      Register a validatable field after the specific field ID.
 
@@ -53,7 +53,7 @@ public protocol ValigatorProtocol {
      * returns: true if the registration was successful, otherwise false
      */
     func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>,
-                                             after afterId: Int) -> Bool where ValidationRule.InputType == InputType
+                                                  after afterId: Int) -> Bool where ValidationRule.InputType == InputType
 
     /**
      Register a validatable crossfield.
@@ -98,20 +98,20 @@ public protocol ValigatorProtocol {
     func resetValidationStateFor(fieldId: Int)
 
     /**
-    Enable/disable a field by the given identifier.
+     Enable/disable a field by the given identifier.
 
-    * parameter id: identifier of the validatable field.
-    * parameter enable: a boolean what refers to the 'shouldValidate' state of the field,
-    * eg.: this should be *true* when we would like to validate the field and *false* when not
-    */
+     * parameter id: identifier of the validatable field.
+     * parameter enable: a boolean what refers to the 'shouldValidate' state of the field,
+     * eg.: this should be *true* when we would like to validate the field and *false* when not
+     */
     func setEnableFieldValidationBy(id: Int, enable: Bool)
 
     /**
-    Get current field state.
+     Get current field state.
 
-    * parameter id: identifier of the field.
-    * returns: FieldState
-    */
+     * parameter id: identifier of the field.
+     * returns: FieldState
+     */
     func fieldState(id: Int) -> FieldState?
 }
 
@@ -128,11 +128,11 @@ public protocol ValigatorDelegate: class {
     func autoFormValidationDidEnd(success: Bool, statusArray: [(id: Int, editState: FieldEditState, validationState: FieldValidationState)])
 
     /**
-    Called when a validation process finished for all validatable field, when we call validateAllField method manually.
+     Called when a validation process finished for all validatable field, when we call validateAllField method manually.
 
-    * parameter success: represents the success of the validation.
-    * parameter statusArray: contains the edit and validation state for every validatable field.
-    */
+     * parameter success: represents the success of the validation.
+     * parameter statusArray: contains the edit and validation state for every validatable field.
+     */
     func manualFormValidationDidEnd(success: Bool, statusArray: [(id: Int, editState: FieldEditState, validationState: FieldValidationState)])
 
     /**
@@ -142,7 +142,7 @@ public protocol ValigatorDelegate: class {
      * parameter success: represents the success of the validation.
      * parameter messages: array of the validation error messages.
      * parameter validationRuleResults: array of tuple that contains the validation result for each rule.
-                            Rules are identified by tag, if tag was not defined for the rule its result will not appear in the array.
+     Rules are identified by tag, if tag was not defined for the rule its result will not appear in the array.
      */
     func fieldValidationDidEnd(fieldId: Int, success: Bool, validationRuleResults: [ValidationRuleResult])
 }

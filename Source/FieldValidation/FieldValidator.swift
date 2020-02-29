@@ -52,14 +52,12 @@ extension FieldValidator: FieldValidationProtocol {
         var validationRuleResults = [ValidationRuleResult]()
 
         for rule in rules {
-
             let isRuleSucceded = rule.validate(value: value)
             if !isRuleSucceded {
                 isSuccess = false
             }
             let ruleResult = ValidationRuleResult(tag: rule.tag, passed: isRuleSucceded, message: rule.message)
             validationRuleResults.append(ruleResult)
-
         }
         delegate?.validationDidEnd(fieldId: fieldId, success: isSuccess, validationRuleResults: validationRuleResults)
     }

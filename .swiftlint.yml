@@ -69,6 +69,7 @@ identifier_name:
         - ad        
         - x
         - y
+        - i
 conditional_returns_on_newline:
     if_only: true
 modifier_order:
@@ -80,12 +81,12 @@ custom_rules:
         name: "Late Force Unwrapping"
         message: "Don't use ? first to force unwrap later – directly unwrap within the parantheses."
         severity: warning
-    missing_docs:
-        included: ".*.swift"
-        regex: '\n *(?!\/\/\/)(\/\/)?[^\n\/]*\n *(?:@\S+ )*(?:public|open)'
-        name: "Missing Docs"
-        message: "Types, properties and methods with public or open access level should be documented."
-        severity: warning
+#    missing_docs:
+#        included: ".*.swift"
+#        regex: '\n *(?!\/\/\/)(\/\/)?[^\n\/]*\n *(?:@\S+ )*(?:public|open)'
+#        name: "Missing Docs"
+#        message: "Types, properties and methods with public or open access level should be documented."
+#        severity: warning
     single_line_return:
         included: ".*.swift"
         regex: '\.\S+ *\{(?: *return|[^\n\}]+ in return) [^\}]+\}'

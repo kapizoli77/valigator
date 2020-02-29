@@ -13,41 +13,32 @@
 		5FAD69A724079CBA00D0EB06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD69A524079CBA00D0EB06 /* Main.storyboard */; };
 		5FAD69A924079CBF00D0EB06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD69A824079CBF00D0EB06 /* Assets.xcassets */; };
 		5FAD69AC24079CBF00D0EB06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD69AA24079CBF00D0EB06 /* LaunchScreen.storyboard */; };
-		5FAD69B724079CBF00D0EB06 /* iOS_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD69B624079CBF00D0EB06 /* iOS_ExampleTests.swift */; };
 		5FAD69CD24079D5600D0EB06 /* Valigator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAD69CB24079D5600D0EB06 /* Valigator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5FAD69DA24079E7A00D0EB06 /* Valigator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAD69D524079E6600D0EB06 /* Valigator.framework */; };
 		5FAD69E02407A40300D0EB06 /* InputFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD69DF2407A40300D0EB06 /* InputFieldTableViewCell.swift */; };
 		5FAD69E32407B9F600D0EB06 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD69E22407B9F600D0EB06 /* TableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5F2FE36C240B035100197E67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F2FE367240B035100197E67 /* Valigator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5FAD69312407198900D0EB06;
+			remoteInfo = Valigator;
+		};
+		5F2FE36E240B035100197E67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F2FE367240B035100197E67 /* Valigator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5FAD693A2407198A00D0EB06;
+			remoteInfo = ValigatorTests;
+		};
 		5FAD69B324079CBF00D0EB06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5FAD699424079CBA00D0EB06 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5FAD699B24079CBA00D0EB06;
 			remoteInfo = "iOS Example";
-		};
-		5FAD69D424079E6600D0EB06 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5FAD69CF24079E6600D0EB06 /* Valigator.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5FAD69312407198900D0EB06;
-			remoteInfo = Valigator;
-		};
-		5FAD69D624079E6600D0EB06 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5FAD69CF24079E6600D0EB06 /* Valigator.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5FAD693A2407198A00D0EB06;
-			remoteInfo = ValigatorTests;
-		};
-		5FAD69D824079E7500D0EB06 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5FAD69CF24079E6600D0EB06 /* Valigator.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5FAD69302407198900D0EB06;
-			remoteInfo = Valigator;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -66,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5F2FE367240B035100197E67 /* Valigator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Valigator.xcodeproj; path = ../Valigator.xcodeproj; sourceTree = "<group>"; };
 		5FAD699C24079CBA00D0EB06 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAD699F24079CBA00D0EB06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FAD69A124079CBA00D0EB06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,10 +67,8 @@
 		5FAD69AB24079CBF00D0EB06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FAD69AD24079CBF00D0EB06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FAD69B224079CBF00D0EB06 /* iOS ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FAD69B624079CBF00D0EB06 /* iOS_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ExampleTests.swift; sourceTree = "<group>"; };
 		5FAD69B824079CBF00D0EB06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FAD69CB24079D5600D0EB06 /* Valigator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Valigator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FAD69CF24079E6600D0EB06 /* Valigator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Valigator.xcodeproj; path = ../../Valigator.xcodeproj; sourceTree = "<group>"; };
 		5FAD69DF2407A40300D0EB06 /* InputFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldTableViewCell.swift; sourceTree = "<group>"; };
 		5FAD69E22407B9F600D0EB06 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FAD69DA24079E7A00D0EB06 /* Valigator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,10 +91,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F2FE368240B035100197E67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F2FE36D240B035100197E67 /* Valigator.framework */,
+				5F2FE36F240B035100197E67 /* ValigatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5FAD699324079CBA00D0EB06 = {
 			isa = PBXGroup;
 			children = (
-				5FAD69CF24079E6600D0EB06 /* Valigator.xcodeproj */,
+				5F2FE367240B035100197E67 /* Valigator.xcodeproj */,
 				5FAD699E24079CBA00D0EB06 /* iOS Example */,
 				5FAD69B524079CBF00D0EB06 /* iOS ExampleTests */,
 				5FAD699D24079CBA00D0EB06 /* Products */,
@@ -139,7 +137,6 @@
 		5FAD69B524079CBF00D0EB06 /* iOS ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				5FAD69B624079CBF00D0EB06 /* iOS_ExampleTests.swift */,
 				5FAD69B824079CBF00D0EB06 /* Info.plist */,
 			);
 			path = "iOS ExampleTests";
@@ -151,15 +148,6 @@
 				5FAD69CB24079D5600D0EB06 /* Valigator.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5FAD69D024079E6600D0EB06 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5FAD69D524079E6600D0EB06 /* Valigator.framework */,
-				5FAD69D724079E6600D0EB06 /* ValigatorTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5FAD69E12407B9DD00D0EB06 /* TableView */ = {
@@ -183,11 +171,11 @@
 				5FAD699924079CBA00D0EB06 /* Frameworks */,
 				5FAD699A24079CBA00D0EB06 /* Resources */,
 				5FAD69CE24079D5600D0EB06 /* Embed Frameworks */,
+				5F2FE364240AFF3900197E67 /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5FAD69D924079E7500D0EB06 /* PBXTargetDependency */,
 			);
 			name = "iOS Example";
 			productName = "iOS Example";
@@ -244,8 +232,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 5FAD69D024079E6600D0EB06 /* Products */;
-					ProjectRef = 5FAD69CF24079E6600D0EB06 /* Valigator.xcodeproj */;
+					ProductGroup = 5F2FE368240B035100197E67 /* Products */;
+					ProjectRef = 5F2FE367240B035100197E67 /* Valigator.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -257,18 +245,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		5FAD69D524079E6600D0EB06 /* Valigator.framework */ = {
+		5F2FE36D240B035100197E67 /* Valigator.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Valigator.framework;
-			remoteRef = 5FAD69D424079E6600D0EB06 /* PBXContainerItemProxy */;
+			remoteRef = 5F2FE36C240B035100197E67 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5FAD69D724079E6600D0EB06 /* ValigatorTests.xctest */ = {
+		5F2FE36F240B035100197E67 /* ValigatorTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ValigatorTests.xctest;
-			remoteRef = 5FAD69D624079E6600D0EB06 /* PBXContainerItemProxy */;
+			remoteRef = 5F2FE36E240B035100197E67 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -293,6 +281,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F2FE364240AFF3900197E67 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5FAD699824079CBA00D0EB06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -310,7 +319,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FAD69B724079CBF00D0EB06 /* iOS_ExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +329,6 @@
 			isa = PBXTargetDependency;
 			target = 5FAD699B24079CBA00D0EB06 /* iOS Example */;
 			targetProxy = 5FAD69B324079CBF00D0EB06 /* PBXContainerItemProxy */;
-		};
-		5FAD69D924079E7500D0EB06 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Valigator;
-			targetProxy = 5FAD69D824079E7500D0EB06 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

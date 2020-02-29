@@ -11,8 +11,10 @@ public struct FieldValidationModel<InputType, Rule: ValidationRuleProtocol> wher
 
     /// Identifier of the field
     public let fieldId: Int
+
     /// Registered validation rules
     public let rules: [Rule]
+
     /// A Boolean value indicating that field is enabled for validation
     public let isEnabled: Bool
 
@@ -29,8 +31,10 @@ public struct FieldValidationModel<InputType, Rule: ValidationRuleProtocol> wher
 public enum FieldEditState {
     /// The given field is never edited
     case neverEdited
+
     /// The given field is editing right now
     case editing
+
     /// The given field is edited, but not editing right now
     case didEdited
 }
@@ -39,8 +43,10 @@ public enum FieldEditState {
 public enum FieldValidationState {
     /// The given field is never validated
     case neverValidated
+
     /// The given field is validated and invalid
     case invalid
+
     /// The given field is validated and valid
     case valid
 
@@ -56,8 +62,10 @@ public struct ValidationRuleResult {
 
     /// The given ValidationRule's TAG
     public let tag: Int?
+
     /// A Boolean value indicating that the validation process was success or not for the given ValidationRule
     public let passed: Bool
+
     /// The given ValidationRule's  error message
     public let message: String
 }

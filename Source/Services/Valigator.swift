@@ -30,19 +30,20 @@ public class Valigator {
 // MARK: - ValigatorProtocol
 
 extension Valigator: ValigatorProtocol {
-    public func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>) where ValidationRule.InputType == InputType {
+    public func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>)
+        where ValidationRule.InputType == InputType {
         let field = FieldValidator(model: fieldModel)
         formValidator?.registerField(field)
     }
 
     public func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>,
-                                                    before beforeId: Int) -> Bool where ValidationRule.InputType == InputType {
+                                                         before beforeId: Int) -> Bool where ValidationRule.InputType == InputType {
         let field = FieldValidator(model: fieldModel)
         return formValidator?.registerField(field, before: beforeId) ?? false
     }
 
     public func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>,
-                                                    after afterId: Int) -> Bool where ValidationRule.InputType == InputType {
+                                                         after afterId: Int) -> Bool where ValidationRule.InputType == InputType {
         let field = FieldValidator(model: fieldModel)
         return formValidator?.registerField(field, after: afterId) ?? false
     }

@@ -20,7 +20,7 @@ platform :ios do
   lane :build do
     xcodebuild(workspace: "Valigator",
         scheme: "iOS Example",
-        xcargs: "-configuration Debug -destination 'generic/platform=iOS Simulator'"
+        xcargs: "-configuration Debug -destination 'name=iPhone 11'"
     )
   end
 end

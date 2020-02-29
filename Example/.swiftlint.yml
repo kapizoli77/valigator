@@ -1,0 +1,205 @@
+# CopySwiftLint will override this file with .swiftlint.yml
+
+## what is this? https://github.com/realm/SwiftLint
+# how to install? https://github.com/realm/SwiftLint
+# where to put? <path_to_workspace>/<project_name>/.swiftlint.yml (at the same level as <project_name>.xcodeproj)
+
+# https://github.com/realm/SwiftLint/issues/1825
+
+opt_in_rules:
+  - closure_spacing
+  - unneeded_parentheses_in_closure_argument
+  - closure_end_indentation
+  - conditional_returns_on_newline
+  - overridden_super_call
+  - private_outlet
+  - switch_case_on_newline
+  - redundant_nil_coalescing
+  - let_var_whitespace
+  - multiline_arguments
+  - multiline_parameters
+  - no_extension_access_modifier
+  - attributes
+  - operator_usage_whitespace
+  - strict_fileprivate
+  - modifier_order
+
+# excluded and included are ignored for nested configurations.
+included: # paths to include during linting. `--path` is ignored if present.
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+
+disabled_rules: # rule identifiers to exclude from running
+  - force_cast
+  - todo
+  - unneeded_break_in_switch
+  - unused_setter_value
+  - deployment_target
+
+large_tuple:
+  warning: 3
+  error: 4
+function_body_length:
+  warning: 60
+file_length:
+  warning: 600
+  error: 700
+  ignore_comment_only_lines: true
+line_length:
+  warning: 160
+  error: 180
+type_name:
+  min_length: 2
+  max_length:
+    warning: 45
+    error: 50
+type_body_length:
+  warning: 500
+  error: 550
+nesting:
+  type_level: 3
+cyclomatic_complexity: 15
+identifier_name:
+    excluded:
+        - id
+        - ok
+        - on
+        - or
+        - vc
+        - os
+        - ad        
+        - x
+        - y
+        - i
+conditional_returns_on_newline:
+    if_only: true
+modifier_order:
+    preferred_modifier_order: [acl, override, setterACL, dynamic, mutators, lazy, final, required, convenience, typeMethods, owned]
+custom_rules:
+    late_force_unwrapping:
+        included: ".*.swift"
+        regex: '\(\S+\?\.\S+\)!'
+        name: "Late Force Unwrapping"
+        message: "Don't use ? first to force unwrap later – directly unwrap within the parantheses."
+        severity: warning
+#    missing_docs:
+#        included: ".*.swift"
+#        regex: '\n *(?!\/\/\/)(\/\/)?[^\n\/]*\n *(?:@\S+ )*(?:public|open)'
+#        name: "Missing Docs"
+#        message: "Types, properties and methods with public or open access level should be documented."
+#        severity: warning
+    single_line_return:
+        included: ".*.swift"
+        regex: '\.\S+ *\{(?: *return|[^\n\}]+ in return) [^\}]+\}'
+        name: "Single Line Return"
+        message: "Remove the 'return' when returning from a single line closure."
+        severity: warning
+    space_before_comment:
+        included: ".*.swift"
+        regex: '\n[ ]{0}[^\/ \n][^\n]*\n[ ]{0}\/\/|\n[ ]{4}[^\/ \n][^\n]*\n[ ]{4}\/\/|\n[ ]{8}[^\/ \n][^\n]*\n[ ]{8}\/\/|\n[ ]{16}[^\/ \n][^\n]*\n[ ]{16}\/\/|\n[ ]{20}[^\/ \n][^\n]*\n[ ]{20}\/\/|\n[ ]{24}[^\/ \n][^\n]*\n[ ]{24}\/\/'
+        name: "Space Before Comment"
+        message: "Always put a space line before a comment line and always comment code beforehand."
+        severity: warning
+    unnecessary_nil_assignment:
+        included: ".*.swift"
+        regex: 'var \S+\s*:\s*[^\s]+\?\s*=\s*nil'
+        name: "Unnecessary Nil Assignment"
+        message: "Don't assign nil as a value when defining an optional type – it's nil by default."
+        severity: warning
+    vertical_whitespace_opening_braces:
+        included: ".*.swift"
+        regex: '[{(\[][ \t]*\n[ \t]*\n'
+        name: "Vertical Whitespace after Opening Braces"
+        message: "Don't include vertical whitespace (empty line) after opening braces."
+        severity: warning
+    vertical_whitespace_closing_braces:
+        included: ".*.swift"
+        regex: '\n[ \t]*\n[ \t]*[)}\]]'
+        name: "Vertical Whitespace before Closing Braces"
+        message: "Don't include vertical whitespace (empty line) before closing braces."
+        severity: warning
+    missing_closure_name:
+        name: "Missing closure name"
+        regex: '^\s*\}\) \{.*'
+        message: "Add the missing closure name"
+        severity: warning
+    unnecessary_leading_void_in:
+        name: "Unnecessary -> Void in at the end of the line"
+        regex: '(-> (Void|\(\)) in$)'
+        message: "Unnecessary '-> Void in' at the end of the line. Use only 'in'"
+        severity: warning
+    empty_closure_params:
+        name: "Empty closure params"
+        regex: '\{ (\(\) -> Void in)$'
+        message: "`() -> Void in` should be avoided"
+        severity: warning
+    get_prefixed_function:
+        name: "Get prefixed function"
+        regex: '(?-smxi)(func get[A-Z0-9][\w]+?(\())'
+        message: "You should not prefix your functions with the word get."
+        severity: warning
+    empty_line_after_super:
+        name: "Empty Line After Super"
+        regex: '(^ *super\.[ a-zA-Z0-9=?.\(\)\{\}:,><!]*\n *(?!(?:\}|return))\S+)'
+        message: "There should be an empty line after super"
+        severity: warning
+    lowercase_constants:
+        name: "Lowercase Constants"
+        regex: '[ \t]let[ \t]*[A-Z][\w]*[ \t]*(=|:)'
+        message: "Constants should begin with a lowercase character."
+        severity: warning
+        match_kinds:
+            - argument
+            - attribute.builtin
+            - attribute.id
+            - buildconfig.id
+            - buildconfig.keyword
+            - comment
+            - comment.mark
+            - comment.url
+            - doccomment
+            - doccomment.field
+            - identifier
+            - keyword
+            - number
+            - objectliteral
+            - parameter
+            - placeholder
+            - typeidentifier
+    double_space:
+        include: "*.swift"
+        name: "Double space"
+        regex: "([a-z,A-Z] \\s+)"
+        message: "Double space between keywords"
+        match_kinds: keyword
+        severity: warning
+    whitespace_comment_start:
+        included: ".*.swift"
+        regex: '[^:#][^:#]\/\/[^\s\/]'
+        name: "Whitespace Comment Start"
+        message: "A comment should always start with a whitespace."
+        severity: warning
+    vertical_whitespaces_around_mark:
+        included: ".*.swift"
+        regex: '\/\/\s*MARK:[^\n]*(\n)(?!\n)|(\n\n\n)[ \t]*\/\/\s*MARK:|[^\s{]\n[^\n\/]*\/\/\s*MARK:'
+        name: "Vertical Whitespaces Around MARK:"
+        message: "Include a single vertical whitespace (empty line) before and after MARK: comments."
+    invalid_mark_format:
+        name: "Invalid MARK Format"
+        regex: '(?m-s)(\/\/[\s]*(?i)(MARK)(?!(\:[\s]{1}\-[\s]{1}){1}))'
+        message: "Use format: MARK: - Your Info"
+        severity: warning
+    invalid_todo_format:
+        name: "Invalid TODO Format"
+        regex: '(?m-s)(\/\/[\s]*(?i)(TODO)(?!(\:[\s]{1}\-[\s]{1}){1}))'
+        message: "Use format: TODO: - Your Info"
+        severity: warning
+    invalid_fixme_format:
+        name: "Invalid FIXME Format"
+        regex: '(?m-s)(\/\/[\s]*(?i)(FIXME)(?!(\:[\s]{1}\-[\s]{1}){1}))'
+        message: "Use format: FIXME: - Your Info"
+        severity: warning
+    invalid_error_format:
+        name: "Invalid WARNING Format"
+        regex: '(?m-s)(\/\/[\s]*(?i)(WARNING)(?!(\:[\s]{1}\-[\s]{1}){1}))'
+        message: "Use format: WARNING: - Your Info"
+        severity: warning

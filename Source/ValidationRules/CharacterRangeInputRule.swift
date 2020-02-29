@@ -1,12 +1,12 @@
 //
-//  CharacterRangeInputRule.swift
+//  CharacterLengthRangeValidationRule.swift
 //  Valigator
 //
 
 import Foundation
 
-public class CharacterRangeInputRule: BaseInputRule<String?> {
-    // MARK: - InputRule properties
+public class CharacterLengthRangeValidationRule: BaseValidationRule<String?> {
+    // MARK: - ValidationRuleProtocol properties
 
     public let minLength: Int
     public let maxLength: Int
@@ -20,7 +20,7 @@ public class CharacterRangeInputRule: BaseInputRule<String?> {
         super.init(message: message)
     }
 
-    // MARK: - BaseInputRule functions
+    // MARK: - BaseValidationRule functions
 
     public override func validate(value: String?) -> Bool {
         guard let value = value else { return false }

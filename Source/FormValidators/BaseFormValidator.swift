@@ -11,13 +11,13 @@ import Foundation
  Strategy related methods:
  - func validatableFieldsAfterEditStateChanged(for fieldId: Int) -> [FieldValidationWrapper]
  - func notifyValidationDelegate(validatableFields: [FieldValidationWrapper])
- - func validatableCrossFieldsBy(validatableFields: [FieldValidationWrapper]) -> [CrossFieldInputRule]
+ - func validatableCrossFieldsBy(validatableFields: [FieldValidationWrapper]) -> [CrossFieldValidationRule]
  */
 class BaseFormValidator: FormValidatorProtocol {
     // MARK: - Properties
 
     public var fields = [FieldValidationWrapper]()
-    public var crossFields = [CrossFieldInputRule]()
+    public var crossFields = [CrossFieldValidationRule]()
     private let validationQueue = OperationQueue()
 
     // MARK: - FormValidatorProtocol properties
@@ -25,7 +25,7 @@ class BaseFormValidator: FormValidatorProtocol {
     weak var delegate: FormValidatorDelegate?
     weak var dataSource: FormValidatorDataSource?
     var isAllFieldValid: Bool {
-        let validatableFields = fields.filter({ $0.fieldValidation.shouldValidate })
+        let validatableFields = fields.filter({ $0.fieldValidation.isEnabled })
         return !validatableFields.contains(where: { $0.fieldValidationState == .invalid || $0.fieldValidationState == .neverValidated })
     }
 
@@ -65,25 +65,25 @@ class BaseFormValidator: FormValidatorProtocol {
         return true
     }
 
-    public func registerCrossFieldInputRule(crossFieldInputRule: CrossFieldInputRule) {
-        crossFields.append(crossFieldInputRule)
+    public func registerCrossFieldValidationRule(crossFieldValidationRule: CrossFieldValidationRule) {
+        crossFields.append(crossFieldValidationRule)
     }
 
     public func validateFieldBy(id: Int) {
-        let validatableFields = fields.filter({ $0.fieldValidation.fieldId == id && $0.fieldValidation.shouldValidate })
+        let validatableFields = fields.filter({ $0.fieldValidation.fieldId == id && $0.fieldValidation.isEnabled })
         validate(validatableFields: validatableFields, allValidatedManually: false)
     }
 
     public func validateFieldBy(index: Int) {
         var validatableFields = [FieldValidationWrapper]()
-        if fields.indices.contains(index), let field = fields[safe: index], field.fieldValidation.shouldValidate {
+        if fields.indices.contains(index), let field = fields[safe: index], field.fieldValidation.isEnabled {
             validatableFields.append(field)
         }
         validate(validatableFields: validatableFields, allValidatedManually: false)
     }
 
     public func validateAllField() {
-        let validatableFields = fields.filter({ $0.fieldValidation.shouldValidate })
+        let validatableFields = fields.filter({ $0.fieldValidation.isEnabled })
         validate(validatableFields: validatableFields, allValidatedManually: true)
     }
 
@@ -151,7 +151,7 @@ class BaseFormValidator: FormValidatorProtocol {
         }
     }
 
-    public func validatableCrossFieldsBy(validatableFields: [FieldValidationWrapper]) -> [CrossFieldInputRule] {
+    public func validatableCrossFieldsBy(validatableFields: [FieldValidationWrapper]) -> [CrossFieldValidationRule] {
         let validatableFieldIds = Set(validatableFields.map({ $0.fieldValidation.fieldId }))
 
         return crossFields.filter { crossField -> Bool in
@@ -175,11 +175,11 @@ class BaseFormValidator: FormValidatorProtocol {
             return
         }
 
-        validatableField.fieldValidation.shouldValidate = enable
+        validatableField.fieldValidation.isEnabled = enable
     }
 
     public func setEnableFieldValidationForAll(_ enable: Bool) {
-        fields.forEach({ $0.fieldValidation.shouldValidate = enable })
+        fields.forEach({ $0.fieldValidation.isEnabled = enable })
     }
 
     public func fieldState(id: Int) -> FieldState? {
@@ -209,14 +209,14 @@ class BaseFormValidator: FormValidatorProtocol {
 // MARK: - FieldRuleDelegate
 
 extension BaseFormValidator: FieldValidationDelegate {
-    public func validationDidEnd(fieldId: Int, success: Bool, messages: [String], inputRuleResults: [InputRuleResult]) {
+    public func validationDidEnd(fieldId: Int, success: Bool, validationRuleResults: [ValidationRuleResult]) {
         guard let field = fields.first(where: { $0.fieldValidation.fieldId == fieldId }) else {
             assertionFailure("Unregistered field with id: \(fieldId)")
             return
         }
 
         field.fieldValidationState = FieldValidationState.stateByValidity(success)
-        delegate?.fieldValidationDidEnd(fieldId: fieldId, success: success, messages: messages, inputRuleResults: inputRuleResults)
+        delegate?.fieldValidationDidEnd(fieldId: fieldId, success: success, validationRuleResults: validationRuleResults)
     }
 }
 
@@ -225,7 +225,7 @@ extension BaseFormValidator: FieldValidationDelegate {
 extension BaseFormValidator: FieldValidationDataSource {
     public func validatableValue<InputType>(for fieldId: Int) throws -> InputType {
         guard let dataSource = dataSource else {
-            throw ValidationServiceError.noDataSource
+            throw ValigatorError.noDataSource
         }
 
         return try dataSource.validatableValue(for: fieldId)

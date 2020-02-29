@@ -2,9 +2,6 @@
 //  ViewController.swift
 //  iOS Example
 //
-//  Created by Kapi Zoltán on 2020. 02. 27..
-//  Copyright © 2020. kapizoli77. All rights reserved.
-//
 
 import UIKit
 import Valigator
@@ -12,9 +9,9 @@ import Valigator
 class TableViewController: UIViewController {
     // Properties
 
-    // If we would like to use ValidationService in a UITableView or a CollectionView validation should be triggered only when the field lose the focus,
+    // If we would like to use Valigator in a UITableView or a CollectionView validation should be triggered only when the field lose the focus,
     // or otherwise we reload the cell for every modification, and every changes will hides the keyboard
-    let validationService = ValidationService(validationStrategy: .endOfField)
+    let valigator = Valigator(validationStrategy: .endOfField)
     let fieldValueManager = FieldValueManager()
     @IBOutlet private var tableView: UITableView!
     private var viewModels = [TableViewCellViewModel]()
@@ -24,7 +21,7 @@ class TableViewController: UIViewController {
         }
 
         self.fieldValueManager.setValue(value, for: fieldId)
-        self.validationService.editStateDidChanged(fieldId: fieldId, isActive: isActive)
+        self.valigator.editStateDidChanged(fieldId: fieldId, isActive: isActive)
     }
     
 
@@ -62,13 +59,13 @@ class TableViewController: UIViewController {
     }
 
     private func registerValidationService() {
-        validationService.validationServiceDelegate = self
-        validationService.validationServiceDataSource = self
+        valigator.delegate = self
+        valigator.dataSource = self
 
         for i in 0...viewModels.count {
-            let rules = [RequiredStringInputRule(message: "This field is required")]
+            let rules = [RequiredStringValidationRule(message: "This field is required")]
             let field = FieldValidationModel(fieldId: i, rules: rules)
-            validationService.registerField(field)
+            valigator.registerField(field)
         }
     }
 }
@@ -102,12 +99,12 @@ extension TableViewController: UITableViewDelegate {
 
 }
 
-// MARK: - ValidationServiceDelegate
+// MARK: - ValigatorDelegate
 
-extension TableViewController: ValidationServiceDelegate {
-    func fieldValidationDidEnd(fieldId: Int, success: Bool, messages: [String], inputRuleResults: [InputRuleResult]) {
-        // Here we can implement how to handle if more than 1 rule gives us validation error, for example get the first message
-        let errorMessage = messages.first
+extension TableViewController: ValigatorDelegate {
+    func fieldValidationDidEnd(fieldId: Int, success: Bool, validationRuleResults: [ValidationRuleResult]) {
+        // Here we can implement how to handle if more than 1 rule gives us validation error, for example get the first message (validationRuleResults array contains all rule's result, valid and invalid too)
+        let errorMessage = validationRuleResults.first(where: { !$0.passed } )?.message
 
         let cellErrorState: CellErrorState
         if !success, let errorMessage = errorMessage {
@@ -129,9 +126,9 @@ extension TableViewController: ValidationServiceDelegate {
     }
 }
 
-// MARK: - ValidationServiceDataSource
+// MARK: - ValigatorDataSource
 
-extension TableViewController: ValidationServiceDataSource {
+extension TableViewController: ValigatorDataSource {
     func validatableValue<InputType>(for fieldId: Int) throws -> InputType {
         return try fieldValueManager.validatableValue(for: fieldId)
     }

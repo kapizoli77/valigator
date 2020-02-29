@@ -10,29 +10,29 @@
 		5FAD693B2407198A00D0EB06 /* Valigator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAD69312407198900D0EB06 /* Valigator.framework */; };
 		5FAD69402407198A00D0EB06 /* ValigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD693F2407198A00D0EB06 /* ValigatorTests.swift */; };
 		5FAD69422407198A00D0EB06 /* Valigator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAD69342407198900D0EB06 /* Valigator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5FAD696E24071C6F00D0EB06 /* FieldValidationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD694D24071C6F00D0EB06 /* FieldValidationEntity.swift */; };
+		5FAD696E24071C6F00D0EB06 /* FieldValidationEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD694D24071C6F00D0EB06 /* FieldValidationEntities.swift */; };
 		5FAD696F24071C6F00D0EB06 /* FieldValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD694E24071C6F00D0EB06 /* FieldValidationProtocol.swift */; };
 		5FAD697024071C6F00D0EB06 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD694F24071C6F00D0EB06 /* FieldValidator.swift */; };
-		5FAD697124071C6F00D0EB06 /* ValidationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695124071C6F00D0EB06 /* ValidationServiceProtocol.swift */; };
-		5FAD697224071C6F00D0EB06 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695224071C6F00D0EB06 /* ValidationService.swift */; };
-		5FAD697324071C6F00D0EB06 /* ValidationServiceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695324071C6F00D0EB06 /* ValidationServiceEntity.swift */; };
-		5FAD697424071C6F00D0EB06 /* EmailInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695524071C6F00D0EB06 /* EmailInputRule.swift */; };
-		5FAD697524071C6F00D0EB06 /* RegexInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695624071C6F00D0EB06 /* RegexInputRule.swift */; };
-		5FAD697624071C6F00D0EB06 /* LowercaseLetterInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695724071C6F00D0EB06 /* LowercaseLetterInputRule.swift */; };
-		5FAD697724071C6F00D0EB06 /* RequiredStringInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695824071C6F00D0EB06 /* RequiredStringInputRule.swift */; };
+		5FAD697124071C6F00D0EB06 /* ValigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695124071C6F00D0EB06 /* ValigatorProtocol.swift */; };
+		5FAD697224071C6F00D0EB06 /* Valigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695224071C6F00D0EB06 /* Valigator.swift */; };
+		5FAD697324071C6F00D0EB06 /* ValigatorEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695324071C6F00D0EB06 /* ValigatorEntities.swift */; };
+		5FAD697424071C6F00D0EB06 /* EmailValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695524071C6F00D0EB06 /* EmailValidationRule.swift */; };
+		5FAD697524071C6F00D0EB06 /* RegexValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695624071C6F00D0EB06 /* RegexValidationRule.swift */; };
+		5FAD697624071C6F00D0EB06 /* LowercaseLetterValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695724071C6F00D0EB06 /* LowercaseLetterValidationRule.swift */; };
+		5FAD697724071C6F00D0EB06 /* RequiredStringValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695824071C6F00D0EB06 /* RequiredStringValidationRule.swift */; };
 		5FAD697824071C6F00D0EB06 /* CharacterRangeInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695924071C6F00D0EB06 /* CharacterRangeInputRule.swift */; };
-		5FAD697924071C6F00D0EB06 /* MinLengthInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695A24071C6F00D0EB06 /* MinLengthInputRule.swift */; };
-		5FAD697A24071C6F00D0EB06 /* InputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695B24071C6F00D0EB06 /* InputRule.swift */; };
+		5FAD697924071C6F00D0EB06 /* MinLengthValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695A24071C6F00D0EB06 /* MinLengthValidationRule.swift */; };
+		5FAD697A24071C6F00D0EB06 /* ValidationRuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695B24071C6F00D0EB06 /* ValidationRuleProtocol.swift */; };
 		5FAD697B24071C6F00D0EB06 /* ExcludeCharactersRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695C24071C6F00D0EB06 /* ExcludeCharactersRule.swift */; };
-		5FAD697C24071C6F00D0EB06 /* RequiredObjectInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695D24071C6F00D0EB06 /* RequiredObjectInputRule.swift */; };
-		5FAD697D24071C6F00D0EB06 /* OnlyDigitsInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695E24071C6F00D0EB06 /* OnlyDigitsInputRule.swift */; };
-		5FAD697E24071C6F00D0EB06 /* OnlyNumberInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695F24071C6F00D0EB06 /* OnlyNumberInputRule.swift */; };
-		5FAD697F24071C6F00D0EB06 /* BaseInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696024071C6F00D0EB06 /* BaseInputRule.swift */; };
-		5FAD698024071C6F00D0EB06 /* RequiredCheckBoxInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696124071C6F00D0EB06 /* RequiredCheckBoxInputRule.swift */; };
-		5FAD698124071C6F00D0EB06 /* CrossFieldInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696224071C6F00D0EB06 /* CrossFieldInputRule.swift */; };
-		5FAD698224071C6F00D0EB06 /* MaxLengthInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696324071C6F00D0EB06 /* MaxLengthInputRule.swift */; };
-		5FAD698324071C6F00D0EB06 /* UppercaseLetterInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696424071C6F00D0EB06 /* UppercaseLetterInputRule.swift */; };
-		5FAD698424071C6F00D0EB06 /* OnlyLetterOrNumberInputRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696524071C6F00D0EB06 /* OnlyLetterOrNumberInputRule.swift */; };
+		5FAD697C24071C6F00D0EB06 /* RequiredObjectValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695D24071C6F00D0EB06 /* RequiredObjectValidationRule.swift */; };
+		5FAD697D24071C6F00D0EB06 /* OnlyDigitsValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695E24071C6F00D0EB06 /* OnlyDigitsValidationRule.swift */; };
+		5FAD697E24071C6F00D0EB06 /* OnlyNumberValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD695F24071C6F00D0EB06 /* OnlyNumberValidationRule.swift */; };
+		5FAD697F24071C6F00D0EB06 /* BaseValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696024071C6F00D0EB06 /* BaseValidationRule.swift */; };
+		5FAD698024071C6F00D0EB06 /* RequiredCheckBoxValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696124071C6F00D0EB06 /* RequiredCheckBoxValidationRule.swift */; };
+		5FAD698124071C6F00D0EB06 /* CrossFieldValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696224071C6F00D0EB06 /* CrossFieldValidationRule.swift */; };
+		5FAD698224071C6F00D0EB06 /* MaxLengthValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696324071C6F00D0EB06 /* MaxLengthValidationRule.swift */; };
+		5FAD698324071C6F00D0EB06 /* UppercaseLetterValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696424071C6F00D0EB06 /* UppercaseLetterValidationRule.swift */; };
+		5FAD698424071C6F00D0EB06 /* OnlyLetterOrNumberValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696524071C6F00D0EB06 /* OnlyLetterOrNumberValidationRule.swift */; };
 		5FAD698524071C6F00D0EB06 /* EndOfFieldFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696724071C6F00D0EB06 /* EndOfFieldFormValidator.swift */; };
 		5FAD698624071C6F00D0EB06 /* BaseFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696824071C6F00D0EB06 /* BaseFormValidator.swift */; };
 		5FAD698724071C6F00D0EB06 /* FieldValidationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696924071C6F00D0EB06 /* FieldValidationWrapper.swift */; };
@@ -40,7 +40,6 @@
 		5FAD698924071C6F00D0EB06 /* NeverFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696B24071C6F00D0EB06 /* NeverFormValidator.swift */; };
 		5FAD698A24071C6F00D0EB06 /* EndOfFormFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696C24071C6F00D0EB06 /* EndOfFormFormValidator.swift */; };
 		5FAD698B24071C6F00D0EB06 /* FormValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD696D24071C6F00D0EB06 /* FormValidatorProtocol.swift */; };
-		5FAD698E2407201C00D0EB06 /* String+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD698D2407201C00D0EB06 /* String+Exts.swift */; };
 		5FAD69902407205C00D0EB06 /* Optional+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD698F2407205C00D0EB06 /* Optional+Exts.swift */; };
 		5FAD69922407217A00D0EB06 /* Collection+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD69912407217A00D0EB06 /* Collection+Exts.swift */; };
 		5FAD69F92407BC1000D0EB06 /* FieldValueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD69F72407BC1000D0EB06 /* FieldValueManager.swift */; };
@@ -64,29 +63,29 @@
 		5FAD693A2407198A00D0EB06 /* ValigatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValigatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAD693F2407198A00D0EB06 /* ValigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValigatorTests.swift; sourceTree = "<group>"; };
 		5FAD69412407198A00D0EB06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FAD694D24071C6F00D0EB06 /* FieldValidationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidationEntity.swift; sourceTree = "<group>"; };
+		5FAD694D24071C6F00D0EB06 /* FieldValidationEntities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidationEntities.swift; sourceTree = "<group>"; };
 		5FAD694E24071C6F00D0EB06 /* FieldValidationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidationProtocol.swift; sourceTree = "<group>"; };
 		5FAD694F24071C6F00D0EB06 /* FieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
-		5FAD695124071C6F00D0EB06 /* ValidationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationServiceProtocol.swift; sourceTree = "<group>"; };
-		5FAD695224071C6F00D0EB06 /* ValidationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
-		5FAD695324071C6F00D0EB06 /* ValidationServiceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationServiceEntity.swift; sourceTree = "<group>"; };
-		5FAD695524071C6F00D0EB06 /* EmailInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailInputRule.swift; sourceTree = "<group>"; };
-		5FAD695624071C6F00D0EB06 /* RegexInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexInputRule.swift; sourceTree = "<group>"; };
-		5FAD695724071C6F00D0EB06 /* LowercaseLetterInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowercaseLetterInputRule.swift; sourceTree = "<group>"; };
-		5FAD695824071C6F00D0EB06 /* RequiredStringInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredStringInputRule.swift; sourceTree = "<group>"; };
+		5FAD695124071C6F00D0EB06 /* ValigatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValigatorProtocol.swift; sourceTree = "<group>"; };
+		5FAD695224071C6F00D0EB06 /* Valigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Valigator.swift; sourceTree = "<group>"; };
+		5FAD695324071C6F00D0EB06 /* ValigatorEntities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValigatorEntities.swift; sourceTree = "<group>"; };
+		5FAD695524071C6F00D0EB06 /* EmailValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidationRule.swift; sourceTree = "<group>"; };
+		5FAD695624071C6F00D0EB06 /* RegexValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexValidationRule.swift; sourceTree = "<group>"; };
+		5FAD695724071C6F00D0EB06 /* LowercaseLetterValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowercaseLetterValidationRule.swift; sourceTree = "<group>"; };
+		5FAD695824071C6F00D0EB06 /* RequiredStringValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredStringValidationRule.swift; sourceTree = "<group>"; };
 		5FAD695924071C6F00D0EB06 /* CharacterRangeInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterRangeInputRule.swift; sourceTree = "<group>"; };
-		5FAD695A24071C6F00D0EB06 /* MinLengthInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinLengthInputRule.swift; sourceTree = "<group>"; };
-		5FAD695B24071C6F00D0EB06 /* InputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputRule.swift; sourceTree = "<group>"; };
+		5FAD695A24071C6F00D0EB06 /* MinLengthValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinLengthValidationRule.swift; sourceTree = "<group>"; };
+		5FAD695B24071C6F00D0EB06 /* ValidationRuleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleProtocol.swift; sourceTree = "<group>"; };
 		5FAD695C24071C6F00D0EB06 /* ExcludeCharactersRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcludeCharactersRule.swift; sourceTree = "<group>"; };
-		5FAD695D24071C6F00D0EB06 /* RequiredObjectInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredObjectInputRule.swift; sourceTree = "<group>"; };
-		5FAD695E24071C6F00D0EB06 /* OnlyDigitsInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyDigitsInputRule.swift; sourceTree = "<group>"; };
-		5FAD695F24071C6F00D0EB06 /* OnlyNumberInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyNumberInputRule.swift; sourceTree = "<group>"; };
-		5FAD696024071C6F00D0EB06 /* BaseInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInputRule.swift; sourceTree = "<group>"; };
-		5FAD696124071C6F00D0EB06 /* RequiredCheckBoxInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredCheckBoxInputRule.swift; sourceTree = "<group>"; };
-		5FAD696224071C6F00D0EB06 /* CrossFieldInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossFieldInputRule.swift; sourceTree = "<group>"; };
-		5FAD696324071C6F00D0EB06 /* MaxLengthInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthInputRule.swift; sourceTree = "<group>"; };
-		5FAD696424071C6F00D0EB06 /* UppercaseLetterInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UppercaseLetterInputRule.swift; sourceTree = "<group>"; };
-		5FAD696524071C6F00D0EB06 /* OnlyLetterOrNumberInputRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyLetterOrNumberInputRule.swift; sourceTree = "<group>"; };
+		5FAD695D24071C6F00D0EB06 /* RequiredObjectValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredObjectValidationRule.swift; sourceTree = "<group>"; };
+		5FAD695E24071C6F00D0EB06 /* OnlyDigitsValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyDigitsValidationRule.swift; sourceTree = "<group>"; };
+		5FAD695F24071C6F00D0EB06 /* OnlyNumberValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyNumberValidationRule.swift; sourceTree = "<group>"; };
+		5FAD696024071C6F00D0EB06 /* BaseValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseValidationRule.swift; sourceTree = "<group>"; };
+		5FAD696124071C6F00D0EB06 /* RequiredCheckBoxValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredCheckBoxValidationRule.swift; sourceTree = "<group>"; };
+		5FAD696224071C6F00D0EB06 /* CrossFieldValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossFieldValidationRule.swift; sourceTree = "<group>"; };
+		5FAD696324071C6F00D0EB06 /* MaxLengthValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthValidationRule.swift; sourceTree = "<group>"; };
+		5FAD696424071C6F00D0EB06 /* UppercaseLetterValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UppercaseLetterValidationRule.swift; sourceTree = "<group>"; };
+		5FAD696524071C6F00D0EB06 /* OnlyLetterOrNumberValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyLetterOrNumberValidationRule.swift; sourceTree = "<group>"; };
 		5FAD696724071C6F00D0EB06 /* EndOfFieldFormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndOfFieldFormValidator.swift; sourceTree = "<group>"; };
 		5FAD696824071C6F00D0EB06 /* BaseFormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFormValidator.swift; sourceTree = "<group>"; };
 		5FAD696924071C6F00D0EB06 /* FieldValidationWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidationWrapper.swift; sourceTree = "<group>"; };
@@ -94,7 +93,6 @@
 		5FAD696B24071C6F00D0EB06 /* NeverFormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeverFormValidator.swift; sourceTree = "<group>"; };
 		5FAD696C24071C6F00D0EB06 /* EndOfFormFormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndOfFormFormValidator.swift; sourceTree = "<group>"; };
 		5FAD696D24071C6F00D0EB06 /* FormValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidatorProtocol.swift; sourceTree = "<group>"; };
-		5FAD698D2407201C00D0EB06 /* String+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Exts.swift"; sourceTree = "<group>"; };
 		5FAD698F2407205C00D0EB06 /* Optional+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Exts.swift"; sourceTree = "<group>"; };
 		5FAD69912407217A00D0EB06 /* Collection+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Exts.swift"; sourceTree = "<group>"; };
 		5FAD69F72407BC1000D0EB06 /* FieldValueManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValueManager.swift; sourceTree = "<group>"; };
@@ -144,7 +142,7 @@
 				5FAD698C2407200E00D0EB06 /* Extensions */,
 				5FAD694C24071C6F00D0EB06 /* FieldValidation */,
 				5FAD696624071C6F00D0EB06 /* FormValidators */,
-				5FAD695424071C6F00D0EB06 /* InputRules */,
+				5FAD695424071C6F00D0EB06 /* ValidationRules */,
 				5FAD695024071C6F00D0EB06 /* Services */,
 				5FAD69F62407BBF900D0EB06 /* FieldValueManager */,
 				5FAD69342407198900D0EB06 /* Valigator.h */,
@@ -165,7 +163,7 @@
 		5FAD694C24071C6F00D0EB06 /* FieldValidation */ = {
 			isa = PBXGroup;
 			children = (
-				5FAD694D24071C6F00D0EB06 /* FieldValidationEntity.swift */,
+				5FAD694D24071C6F00D0EB06 /* FieldValidationEntities.swift */,
 				5FAD694E24071C6F00D0EB06 /* FieldValidationProtocol.swift */,
 				5FAD694F24071C6F00D0EB06 /* FieldValidator.swift */,
 			);
@@ -175,35 +173,35 @@
 		5FAD695024071C6F00D0EB06 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5FAD695124071C6F00D0EB06 /* ValidationServiceProtocol.swift */,
-				5FAD695224071C6F00D0EB06 /* ValidationService.swift */,
-				5FAD695324071C6F00D0EB06 /* ValidationServiceEntity.swift */,
+				5FAD695124071C6F00D0EB06 /* ValigatorProtocol.swift */,
+				5FAD695224071C6F00D0EB06 /* Valigator.swift */,
+				5FAD695324071C6F00D0EB06 /* ValigatorEntities.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		5FAD695424071C6F00D0EB06 /* InputRules */ = {
+		5FAD695424071C6F00D0EB06 /* ValidationRules */ = {
 			isa = PBXGroup;
 			children = (
-				5FAD695524071C6F00D0EB06 /* EmailInputRule.swift */,
-				5FAD695624071C6F00D0EB06 /* RegexInputRule.swift */,
-				5FAD695724071C6F00D0EB06 /* LowercaseLetterInputRule.swift */,
-				5FAD695824071C6F00D0EB06 /* RequiredStringInputRule.swift */,
+				5FAD695B24071C6F00D0EB06 /* ValidationRuleProtocol.swift */,
+				5FAD696024071C6F00D0EB06 /* BaseValidationRule.swift */,
+				5FAD695624071C6F00D0EB06 /* RegexValidationRule.swift */,
+				5FAD695524071C6F00D0EB06 /* EmailValidationRule.swift */,
+				5FAD695724071C6F00D0EB06 /* LowercaseLetterValidationRule.swift */,
+				5FAD696424071C6F00D0EB06 /* UppercaseLetterValidationRule.swift */,
+				5FAD695E24071C6F00D0EB06 /* OnlyDigitsValidationRule.swift */,
+				5FAD695F24071C6F00D0EB06 /* OnlyNumberValidationRule.swift */,
+				5FAD696524071C6F00D0EB06 /* OnlyLetterOrNumberValidationRule.swift */,
+				5FAD695824071C6F00D0EB06 /* RequiredStringValidationRule.swift */,
 				5FAD695924071C6F00D0EB06 /* CharacterRangeInputRule.swift */,
-				5FAD695A24071C6F00D0EB06 /* MinLengthInputRule.swift */,
-				5FAD695B24071C6F00D0EB06 /* InputRule.swift */,
+				5FAD695A24071C6F00D0EB06 /* MinLengthValidationRule.swift */,
 				5FAD695C24071C6F00D0EB06 /* ExcludeCharactersRule.swift */,
-				5FAD695D24071C6F00D0EB06 /* RequiredObjectInputRule.swift */,
-				5FAD695E24071C6F00D0EB06 /* OnlyDigitsInputRule.swift */,
-				5FAD695F24071C6F00D0EB06 /* OnlyNumberInputRule.swift */,
-				5FAD696024071C6F00D0EB06 /* BaseInputRule.swift */,
-				5FAD696124071C6F00D0EB06 /* RequiredCheckBoxInputRule.swift */,
-				5FAD696224071C6F00D0EB06 /* CrossFieldInputRule.swift */,
-				5FAD696324071C6F00D0EB06 /* MaxLengthInputRule.swift */,
-				5FAD696424071C6F00D0EB06 /* UppercaseLetterInputRule.swift */,
-				5FAD696524071C6F00D0EB06 /* OnlyLetterOrNumberInputRule.swift */,
+				5FAD695D24071C6F00D0EB06 /* RequiredObjectValidationRule.swift */,
+				5FAD696324071C6F00D0EB06 /* MaxLengthValidationRule.swift */,
+				5FAD696124071C6F00D0EB06 /* RequiredCheckBoxValidationRule.swift */,
+				5FAD696224071C6F00D0EB06 /* CrossFieldValidationRule.swift */,
 			);
-			path = InputRules;
+			path = ValidationRules;
 			sourceTree = "<group>";
 		};
 		5FAD696624071C6F00D0EB06 /* FormValidators */ = {
@@ -223,7 +221,6 @@
 		5FAD698C2407200E00D0EB06 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5FAD698D2407201C00D0EB06 /* String+Exts.swift */,
 				5FAD698F2407205C00D0EB06 /* Optional+Exts.swift */,
 				5FAD69912407217A00D0EB06 /* Collection+Exts.swift */,
 			);
@@ -348,41 +345,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FAD697624071C6F00D0EB06 /* LowercaseLetterInputRule.swift in Sources */,
-				5FAD697924071C6F00D0EB06 /* MinLengthInputRule.swift in Sources */,
-				5FAD698124071C6F00D0EB06 /* CrossFieldInputRule.swift in Sources */,
+				5FAD697624071C6F00D0EB06 /* LowercaseLetterValidationRule.swift in Sources */,
+				5FAD697924071C6F00D0EB06 /* MinLengthValidationRule.swift in Sources */,
+				5FAD698124071C6F00D0EB06 /* CrossFieldValidationRule.swift in Sources */,
 				5FAD69902407205C00D0EB06 /* Optional+Exts.swift in Sources */,
-				5FAD698324071C6F00D0EB06 /* UppercaseLetterInputRule.swift in Sources */,
-				5FAD698224071C6F00D0EB06 /* MaxLengthInputRule.swift in Sources */,
+				5FAD698324071C6F00D0EB06 /* UppercaseLetterValidationRule.swift in Sources */,
+				5FAD698224071C6F00D0EB06 /* MaxLengthValidationRule.swift in Sources */,
 				5FAD698A24071C6F00D0EB06 /* EndOfFormFormValidator.swift in Sources */,
 				5FAD698724071C6F00D0EB06 /* FieldValidationWrapper.swift in Sources */,
-				5FAD697D24071C6F00D0EB06 /* OnlyDigitsInputRule.swift in Sources */,
+				5FAD697D24071C6F00D0EB06 /* OnlyDigitsValidationRule.swift in Sources */,
 				5FAD697B24071C6F00D0EB06 /* ExcludeCharactersRule.swift in Sources */,
-				5FAD697124071C6F00D0EB06 /* ValidationServiceProtocol.swift in Sources */,
+				5FAD697124071C6F00D0EB06 /* ValigatorProtocol.swift in Sources */,
 				5FAD698924071C6F00D0EB06 /* NeverFormValidator.swift in Sources */,
-				5FAD697424071C6F00D0EB06 /* EmailInputRule.swift in Sources */,
+				5FAD697424071C6F00D0EB06 /* EmailValidationRule.swift in Sources */,
 				5FAD698824071C6F00D0EB06 /* DuringEditFormValidator.swift in Sources */,
-				5FAD697E24071C6F00D0EB06 /* OnlyNumberInputRule.swift in Sources */,
+				5FAD697E24071C6F00D0EB06 /* OnlyNumberValidationRule.swift in Sources */,
 				5FAD698624071C6F00D0EB06 /* BaseFormValidator.swift in Sources */,
 				5FAD698524071C6F00D0EB06 /* EndOfFieldFormValidator.swift in Sources */,
 				5FAD69922407217A00D0EB06 /* Collection+Exts.swift in Sources */,
 				5FAD69F92407BC1000D0EB06 /* FieldValueManager.swift in Sources */,
-				5FAD697524071C6F00D0EB06 /* RegexInputRule.swift in Sources */,
-				5FAD697C24071C6F00D0EB06 /* RequiredObjectInputRule.swift in Sources */,
+				5FAD697524071C6F00D0EB06 /* RegexValidationRule.swift in Sources */,
+				5FAD697C24071C6F00D0EB06 /* RequiredObjectValidationRule.swift in Sources */,
 				5FAD698B24071C6F00D0EB06 /* FormValidatorProtocol.swift in Sources */,
-				5FAD697F24071C6F00D0EB06 /* BaseInputRule.swift in Sources */,
-				5FAD698024071C6F00D0EB06 /* RequiredCheckBoxInputRule.swift in Sources */,
-				5FAD697324071C6F00D0EB06 /* ValidationServiceEntity.swift in Sources */,
-				5FAD697A24071C6F00D0EB06 /* InputRule.swift in Sources */,
-				5FAD698E2407201C00D0EB06 /* String+Exts.swift in Sources */,
-				5FAD697224071C6F00D0EB06 /* ValidationService.swift in Sources */,
+				5FAD697F24071C6F00D0EB06 /* BaseValidationRule.swift in Sources */,
+				5FAD698024071C6F00D0EB06 /* RequiredCheckBoxValidationRule.swift in Sources */,
+				5FAD697324071C6F00D0EB06 /* ValigatorEntities.swift in Sources */,
+				5FAD697A24071C6F00D0EB06 /* ValidationRuleProtocol.swift in Sources */,
+				5FAD697224071C6F00D0EB06 /* Valigator.swift in Sources */,
 				5FAD697824071C6F00D0EB06 /* CharacterRangeInputRule.swift in Sources */,
 				5FAD697024071C6F00D0EB06 /* FieldValidator.swift in Sources */,
 				5FAD69FA2407BC1000D0EB06 /* FieldValueManagerEntity.swift in Sources */,
-				5FAD696E24071C6F00D0EB06 /* FieldValidationEntity.swift in Sources */,
-				5FAD697724071C6F00D0EB06 /* RequiredStringInputRule.swift in Sources */,
+				5FAD696E24071C6F00D0EB06 /* FieldValidationEntities.swift in Sources */,
+				5FAD697724071C6F00D0EB06 /* RequiredStringValidationRule.swift in Sources */,
 				5FAD696F24071C6F00D0EB06 /* FieldValidationProtocol.swift in Sources */,
-				5FAD698424071C6F00D0EB06 /* OnlyLetterOrNumberInputRule.swift in Sources */,
+				5FAD698424071C6F00D0EB06 /* OnlyLetterOrNumberValidationRule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

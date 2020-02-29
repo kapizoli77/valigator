@@ -1,14 +1,14 @@
 //
-//  RegexInputRule.swift
+//  RegexValidationRule.swift
 //  Valigator
 //
 
 import Foundation
 
-public class RegexInputRule: BaseInputRule<String?> {
+public class RegexValidationRule: BaseValidationRule<String?> {
     // MARK: - Properties
 
-    private var regex: String
+    private let regex: String
 
     // MARK: - Initialization
 
@@ -18,7 +18,7 @@ public class RegexInputRule: BaseInputRule<String?> {
         super.init(message: message)
     }
 
-    // MARK: - BaseInputRule functions
+    // MARK: - BaseValidationRule functions
 
     public override func validate(value: String?) -> Bool {
         let test = NSPredicate(format: "SELF MATCHES %@", regex)

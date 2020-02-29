@@ -1,15 +1,15 @@
 //
-//  ValidationServiceProtocol.swift
+//  ValigatorProtocol.swift
 //  Valigator
 //
 
 import Foundation
 
 /**
- ValidationServiceProtocol is a protocol which declares the public interfaces on the Validation servie.
- You can use this service to validate single fields or a list of input fields.
+ ValigatorProtocol is a protocol which declares the public interfaces on the Valigator.
+ This service can use to validate single fields or a list of input fields.
  */
-public protocol ValidationServiceProtocol {
+public protocol ValigatorProtocol {
     /**
      Declares the validation strategy.
      This is a read only property, most cases the value is set in the initializer.
@@ -19,12 +19,12 @@ public protocol ValidationServiceProtocol {
     /**
      The receiver’s delegate.
      */
-    var validationServiceDelegate: ValidationServiceDelegate? { get set }
+    var delegate: ValigatorDelegate? { get set }
 
     /**
-     The object that acts as the data source of the validation service.
+     The object that acts as the data source of the Valigator.
      */
-    var validationServiceDataSource: ValidationServiceDataSource? { get set }
+    var dataSource: ValigatorDataSource? { get set }
 
     /**
      Returns true if the fields has been validated and are valid.
@@ -36,7 +36,7 @@ public protocol ValidationServiceProtocol {
 
      * parameter fieldModel: model that describe field with generic type to define the type of the validatable value.
      */
-    func registerField<InputType, InputRule>(_ fieldModel: FieldValidationModel<InputType, InputRule>) where InputRule.InputType == InputType
+    func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>) where ValidationRule.InputType == InputType
 
     /**
      Register a validatable field before the specific field ID.
@@ -44,23 +44,23 @@ public protocol ValidationServiceProtocol {
      * parameter fieldModel: model that describe field with generic type to define the type of the validatable value.
      * returns: true if the registration was successful, otherwise false
      */
-    func registerField<InputType, InputRule>(_ fieldModel: FieldValidationModel<InputType, InputRule>,
-                                             before beforeId: Int) -> Bool where InputRule.InputType == InputType
+    func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>,
+                                             before beforeId: Int) -> Bool where ValidationRule.InputType == InputType
     /**
      Register a validatable field after the specific field ID.
 
      * parameter fieldModel: model that describe field with generic type to define the type of the validatable value.
      * returns: true if the registration was successful, otherwise false
      */
-    func registerField<InputType, InputRule>(_ fieldModel: FieldValidationModel<InputType, InputRule>,
-                                             after afterId: Int) -> Bool where InputRule.InputType == InputType
+    func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>,
+                                             after afterId: Int) -> Bool where ValidationRule.InputType == InputType
 
     /**
      Register a validatable crossfield.
 
-     * parameter crossFieldInputRule: a struct what declares the validation logic.
+     * parameter crossFieldValidationRule: a struct what declares the validation logic.
      */
-    func registerCrossFieldInputRule(crossFieldInputRule: CrossFieldInputRule)
+    func registerCrossFieldValidationRule(crossFieldValidationRule: CrossFieldValidationRule)
 
     /**
      Validate a field by the given identifier.
@@ -118,7 +118,7 @@ public protocol ValidationServiceProtocol {
 /**
  Protocol that declares the methods for validation service delegate
  */
-public protocol ValidationServiceDelegate: class {
+public protocol ValigatorDelegate: class {
     /**
      Called when a validation process finished for all validatable field after automatic validation. The logic described in validation strategy.
 
@@ -141,22 +141,22 @@ public protocol ValidationServiceDelegate: class {
      * parameter fieldId: identifier of the field.
      * parameter success: represents the success of the validation.
      * parameter messages: array of the validation error messages.
-     * parameter inputRuleResults: array of tuple that contains the validation result for each rule.
+     * parameter validationRuleResults: array of tuple that contains the validation result for each rule.
                             Rules are identified by tag, if tag was not defined for the rule its result will not appear in the array.
      */
-    func fieldValidationDidEnd(fieldId: Int, success: Bool, messages: [String], inputRuleResults: [InputRuleResult])
+    func fieldValidationDidEnd(fieldId: Int, success: Bool, validationRuleResults: [ValidationRuleResult])
 }
 
-extension ValidationServiceDelegate {
+extension ValigatorDelegate {
     public func autoFormValidationDidEnd(success: Bool, statusArray: [(id: Int, editState: FieldEditState, validationState: FieldValidationState)]) {}
     public func manualFormValidationDidEnd(success: Bool, statusArray: [(id: Int, editState: FieldEditState, validationState: FieldValidationState)]) {}
-    public func fieldValidationDidEnd(fieldId: Int, success: Bool, messages: [String], inputRuleResults: [InputRuleResult]) {}
+    public func fieldValidationDidEnd(fieldId: Int, success: Bool, messages: [String], validationRuleResults: [ValidationRuleResult]) {}
 }
 
 /**
  Protocol that declares the methods for validation service data source
  */
-public protocol ValidationServiceDataSource: class {
+public protocol ValigatorDataSource: class {
     /**
      Called in the validation process to get the value from input field.
 

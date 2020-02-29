@@ -1,12 +1,12 @@
 //
-//  MinLengthInputRule.swift
+//  MinLengthValidationRule.swift
 //  Valigator
 //
 
 import Foundation
 
-public class MinLengthInputRule: BaseInputRule<String?> {
-    // MARK: - InputRule properties
+public class MinLengthValidationRule: BaseValidationRule<String?> {
+    // MARK: - ValidationRuleProtocol properties
 
     public let minLength: Int
 
@@ -18,7 +18,7 @@ public class MinLengthInputRule: BaseInputRule<String?> {
         super.init(message: message)
     }
 
-    // MARK: - BaseInputRule functions
+    // MARK: - BaseValidationRule functions
 
     public override func validate(value: String?) -> Bool {
         guard let value = value else { return true }

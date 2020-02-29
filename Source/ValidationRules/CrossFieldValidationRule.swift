@@ -1,11 +1,11 @@
 //
-//  CrossFieldInputRule.swift
+//  CrossFieldValidationRule.swift
 //  Valigator
 //
 
 import Foundation
 
-public struct CrossFieldInputRule {
+public struct CrossFieldValidationRule {
     // MARK: - Properties
 
     var relatedFieldIds: [Int]

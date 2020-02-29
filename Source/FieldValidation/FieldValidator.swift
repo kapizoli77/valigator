@@ -8,7 +8,7 @@ import Foundation
 /**
  This class contains the logic to validate a single field.
  */
-public final class FieldValidator<InputType, Rule: InputRule> where Rule.InputType == InputType {
+public final class FieldValidator<InputType, Rule: ValidationRuleProtocol> where Rule.InputType == InputType {
     // MARK: - Properties
 
     private let rules: [Rule]
@@ -18,14 +18,14 @@ public final class FieldValidator<InputType, Rule: InputRule> where Rule.InputTy
     public weak var delegate: FieldValidationDelegate?
     public weak var dataSource: FieldValidationDataSource?
     public let fieldId: Int
-    public var shouldValidate: Bool
+    public var isEnabled: Bool
 
     // MARK: - Initialization
 
     public init(model: FieldValidationModel<InputType, Rule>) {
         self.fieldId = model.fieldId
         self.rules = model.rules
-        self.shouldValidate = model.shouldValidate
+        self.isEnabled = model.isEnabled
     }
 }
 
@@ -35,7 +35,7 @@ extension FieldValidator: FieldValidationProtocol {
     public func validateField() {
         guard let dataSource = dataSource else {
             assertionFailure("dataSource cannot be nil")
-            delegate?.validationDidEnd(fieldId: fieldId, success: false, messages: [], inputRuleResults: [])
+            delegate?.validationDidEnd(fieldId: fieldId, success: false, validationRuleResults: [])
             return
         }
 
@@ -44,24 +44,23 @@ extension FieldValidator: FieldValidationProtocol {
             value = try dataSource.validatableValue(for: fieldId)
         } catch {
             assertionFailure("Invalid InputType! If the value can be nil, you should use a Rule with optional InputType!")
-            delegate?.validationDidEnd(fieldId: fieldId, success: false, messages: [], inputRuleResults: [])
+            delegate?.validationDidEnd(fieldId: fieldId, success: false, validationRuleResults: [])
             return
         }
 
-        var messages = [String]()
-        var inputRuleResults = [InputRuleResult]()
+        var isSuccess = true
+        var validationRuleResults = [ValidationRuleResult]()
 
         for rule in rules {
-            var isSuccess = true
-            if !rule.validate(value: value) {
-                messages.append(rule.message)
+
+            let isRuleSucceded = rule.validate(value: value)
+            if !isRuleSucceded {
                 isSuccess = false
             }
+            let ruleResult = ValidationRuleResult(tag: rule.tag, passed: isRuleSucceded, message: rule.message)
+            validationRuleResults.append(ruleResult)
 
-            if let tag = rule.tag {
-                inputRuleResults.append((tag, isSuccess))
-            }
         }
-        delegate?.validationDidEnd(fieldId: fieldId, success: messages.isEmpty, messages: messages, inputRuleResults: inputRuleResults)
+        delegate?.validationDidEnd(fieldId: fieldId, success: isSuccess, validationRuleResults: validationRuleResults)
     }
 }

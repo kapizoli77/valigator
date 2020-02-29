@@ -10,14 +10,14 @@ public protocol FieldValidationDataSource: class {
 }
 
 public protocol FieldValidationDelegate: class {
-    func validationDidEnd(fieldId: Int, success: Bool, messages: [String], inputRuleResults: [InputRuleResult])
+    func validationDidEnd(fieldId: Int, success: Bool, validationRuleResults: [ValidationRuleResult])
 }
 
 public protocol FieldValidationProtocol {
     var fieldId: Int { get }
     var delegate: FieldValidationDelegate? { get set }
     var dataSource: FieldValidationDataSource? { get set }
-    var shouldValidate: Bool { get set }
+    var isEnabled: Bool { get set }
 
     func validateField()
 }

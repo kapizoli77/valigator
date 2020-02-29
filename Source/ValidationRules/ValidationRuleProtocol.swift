@@ -1,5 +1,5 @@
 //
-//  InputRule.swift
+//  ValidationRuleProtocol.swift
 //  Valigator
 //
 
@@ -8,7 +8,7 @@ import Foundation
 /**
  This protocol contains the public properties and functions for a specific validation rule for a single field.
  */
-public protocol InputRule {
+public protocol ValidationRuleProtocol {
     // MARK: - Types
 
     associatedtype InputType

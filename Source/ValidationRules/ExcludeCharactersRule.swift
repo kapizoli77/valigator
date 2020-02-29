@@ -1,12 +1,12 @@
 //
-//  ExcludeCharactersRule.swift
+//  ExcludeCharactersValidationRule.swift
 //  Valigator
 //
 
 import Foundation
 
-public class ExcludeCharactersInputRule: BaseInputRule<String?> {
-    // MARK: - InputRule properties
+public class ExcludeCharactersValidationRule: BaseValidationRule<String?> {
+    // MARK: - ValidationRuleProtocol properties
 
     public let excludedCharacters: [Character]
 
@@ -18,7 +18,7 @@ public class ExcludeCharactersInputRule: BaseInputRule<String?> {
         super.init(message: message)
     }
 
-    // MARK: - BaseInputRule functions
+    // MARK: - BaseValidationRule functions
 
     public override func validate(value: String?) -> Bool {
         guard let value = value else { return true }

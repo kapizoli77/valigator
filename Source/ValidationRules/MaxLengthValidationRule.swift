@@ -1,12 +1,12 @@
 //
-//  MaxLengthInputRule.swift
+//  MaxLengthValidationRule.swift
 //  Valigator
 //
 
 import Foundation
 
-public class MaxLengthInputRule: BaseInputRule<String?> {
-    // MARK: - InputRule properties
+public class MaxLengthValidationRule: BaseValidationRule<String?> {
+    // MARK: - ValidationRuleProtocol properties
 
     public let maxLength: Int
 
@@ -18,7 +18,7 @@ public class MaxLengthInputRule: BaseInputRule<String?> {
         super.init(message: message)
     }
 
-    // MARK: - BaseInputRule functions
+    // MARK: - BaseValidationRule functions
 
     public override func validate(value: String?) -> Bool {
         guard let value = value else { return true }

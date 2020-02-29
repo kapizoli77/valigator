@@ -1,12 +1,12 @@
 //
-//  CheckBoxInputRule.swift
+//  RequiredCheckBoxValidationRule.swift
 //  Valigator
 //
 
 import Foundation
 
-public class RequiredCheckBoxInputRule {
-    // MARK: - InputRule properties
+public class RequiredCheckBoxValidationRule {
+    // MARK: - ValidationRuleProtocol properties
 
     public let message: String
     public var tag: Int?
@@ -18,9 +18,9 @@ public class RequiredCheckBoxInputRule {
     }
 }
 
-// MARK: - InputRule
+// MARK: - ValidationRuleProtocol
 
-extension RequiredCheckBoxInputRule: InputRule {
+extension RequiredCheckBoxValidationRule: ValidationRuleProtocol {
     public func validate(value: Bool) -> Bool {
         return value
     }

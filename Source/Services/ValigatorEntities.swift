@@ -1,15 +1,15 @@
 //
-//  ValidationServiceEntity.swift
+//  ValigatorEntities.swift
 //  Valigator
 //
 
 import Foundation
 
-/** Validation Service Error Types
+/** Valigator Error Types
 
  - noDataSource: Data source is nil
  */
-public enum ValidationServiceError: Error {
+public enum ValigatorError: Error {
     case noDataSource
 }
 

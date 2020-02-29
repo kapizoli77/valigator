@@ -2,9 +2,6 @@
 //  iOS_ExampleTests.swift
 //  iOS ExampleTests
 //
-//  Created by Kapi Zoltán on 2020. 02. 27..
-//  Copyright © 2020. kapizoli77. All rights reserved.
-//
 
 import XCTest
 @testable import iOS_Example

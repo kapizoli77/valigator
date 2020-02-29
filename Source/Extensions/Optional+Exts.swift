@@ -6,7 +6,8 @@
 import Foundation
 
 extension Optional where Wrapped: CustomStringConvertible {
-    var isBlank: Bool {
-        return self?.description.isBlank ?? true
+    /// A Boolean value indicating whether an optional string has no characters.
+    var isEmpty: Bool {
+        return self?.description.isEmpty ?? true
     }
 }

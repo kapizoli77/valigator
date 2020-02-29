@@ -1,20 +1,20 @@
 //
-//  ValidationService.swift
+//  Valigator.swift
 //  Valigator
 //
 
 import Foundation
 
-public class ValidationService {
+public class Valigator {
     // MARK: - Properties
 
     private var formValidator: FormValidatorProtocol?
 
-    // MARK: - ValidationServiceProtocol properties
+    // MARK: - ValigatorProtocol properties
 
     public let validationStrategy: ValidationStrategy
-    public weak var validationServiceDelegate: ValidationServiceDelegate?
-    public weak var validationServiceDataSource: ValidationServiceDataSource?
+    public weak var delegate: ValigatorDelegate?
+    public weak var dataSource: ValigatorDataSource?
     public var isAllFieldValid: Bool {
         return formValidator?.isAllFieldValid ?? false
     }
@@ -27,28 +27,28 @@ public class ValidationService {
     }
 }
 
-// MARK: - ValidationServiceProtocol
+// MARK: - ValigatorProtocol
 
-extension ValidationService: ValidationServiceProtocol {
-    public func registerField<InputType, InputRule>(_ fieldModel: FieldValidationModel<InputType, InputRule>) where InputRule.InputType == InputType {
+extension Valigator: ValigatorProtocol {
+    public func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>) where ValidationRule.InputType == InputType {
         let field = FieldValidator(model: fieldModel)
         formValidator?.registerField(field)
     }
 
-    public func registerField<InputType, InputRule>(_ fieldModel: FieldValidationModel<InputType, InputRule>,
-                                                    before beforeId: Int) -> Bool where InputRule.InputType == InputType {
+    public func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>,
+                                                    before beforeId: Int) -> Bool where ValidationRule.InputType == InputType {
         let field = FieldValidator(model: fieldModel)
         return formValidator?.registerField(field, before: beforeId) ?? false
     }
 
-    public func registerField<InputType, InputRule>(_ fieldModel: FieldValidationModel<InputType, InputRule>,
-                                                    after afterId: Int) -> Bool where InputRule.InputType == InputType {
+    public func registerField<InputType, ValidationRule>(_ fieldModel: FieldValidationModel<InputType, ValidationRule>,
+                                                    after afterId: Int) -> Bool where ValidationRule.InputType == InputType {
         let field = FieldValidator(model: fieldModel)
         return formValidator?.registerField(field, after: afterId) ?? false
     }
 
-    public func registerCrossFieldInputRule(crossFieldInputRule: CrossFieldInputRule) {
-        formValidator?.registerCrossFieldInputRule(crossFieldInputRule: crossFieldInputRule)
+    public func registerCrossFieldValidationRule(crossFieldValidationRule: CrossFieldValidationRule) {
+        formValidator?.registerCrossFieldValidationRule(crossFieldValidationRule: crossFieldValidationRule)
     }
 
     public func validateFieldBy(id: Int) {
@@ -83,28 +83,28 @@ extension ValidationService: ValidationServiceProtocol {
 
 // MARK: - FormValidatorDelegate
 
-extension ValidationService: FormValidatorDelegate {
+extension Valigator: FormValidatorDelegate {
     public func autoFormValidationDidEnd(success: Bool, statusArray: [(id: Int, editState: FieldEditState, validationState: FieldValidationState)]) {
-        validationServiceDelegate?.autoFormValidationDidEnd(success: success, statusArray: statusArray)
+        delegate?.autoFormValidationDidEnd(success: success, statusArray: statusArray)
     }
 
     public func manualFormValidationDidEnd(success: Bool, statusArray: [(id: Int, editState: FieldEditState, validationState: FieldValidationState)]) {
-        validationServiceDelegate?.manualFormValidationDidEnd(success: success, statusArray: statusArray)
+        delegate?.manualFormValidationDidEnd(success: success, statusArray: statusArray)
     }
 
-    public func fieldValidationDidEnd(fieldId: Int, success: Bool, messages: [String], inputRuleResults: [InputRuleResult]) {
-        validationServiceDelegate?.fieldValidationDidEnd(fieldId: fieldId, success: success, messages: messages, inputRuleResults: inputRuleResults)
+    public func fieldValidationDidEnd(fieldId: Int, success: Bool, validationRuleResults: [ValidationRuleResult]) {
+        delegate?.fieldValidationDidEnd(fieldId: fieldId, success: success, validationRuleResults: validationRuleResults)
     }
 }
 
 // MARK: - FormValidatorDataSource
 
-extension ValidationService: FormValidatorDataSource {
+extension Valigator: FormValidatorDataSource {
     public func validatableValue<InputType>(for fieldId: Int) throws -> InputType {
-        guard let validationServiceDataSource = validationServiceDataSource else {
-            throw ValidationServiceError.noDataSource
+        guard let dataSource = dataSource else {
+            throw ValigatorError.noDataSource
         }
 
-        return try validationServiceDataSource.validatableValue(for: fieldId)
+        return try dataSource.validatableValue(for: fieldId)
     }
 }

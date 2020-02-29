@@ -8,7 +8,7 @@ import Foundation
 public protocol FormValidatorDelegate: class {
     func autoFormValidationDidEnd(success: Bool, statusArray: [(id: Int, editState: FieldEditState, validationState: FieldValidationState)])
     func manualFormValidationDidEnd(success: Bool, statusArray: [(id: Int, editState: FieldEditState, validationState: FieldValidationState)])
-    func fieldValidationDidEnd(fieldId: Int, success: Bool, messages: [String], inputRuleResults: [InputRuleResult])
+    func fieldValidationDidEnd(fieldId: Int, success: Bool, validationRuleResults: [ValidationRuleResult])
 }
 
 public protocol FormValidatorDataSource: class {
@@ -26,7 +26,7 @@ public protocol FormValidatorProtocol {
     func registerField(_ field: FieldValidationProtocol)
     func registerField(_ field: FieldValidationProtocol, before beforeId: Int) -> Bool
     func registerField(_ field: FieldValidationProtocol, after afterId: Int) -> Bool
-    func registerCrossFieldInputRule(crossFieldInputRule: CrossFieldInputRule)
+    func registerCrossFieldValidationRule(crossFieldValidationRule: CrossFieldValidationRule)
     func validateFieldBy(id: Int)
     func validateFieldBy(index: Int)
     func validateAllField()
@@ -34,7 +34,7 @@ public protocol FormValidatorProtocol {
     func validate(validatableFields: [FieldValidationWrapper], allValidatedManually: Bool)
     func validatableFieldsAfterEditStateChanged(for fieldId: Int) -> [FieldValidationWrapper]
     func notifyValidationDelegate(validatableFields: [FieldValidationWrapper], allValidatedManually: Bool)
-    func validatableCrossFieldsBy(validatableFields: [FieldValidationWrapper]) -> [CrossFieldInputRule]
+    func validatableCrossFieldsBy(validatableFields: [FieldValidationWrapper]) -> [CrossFieldValidationRule]
     func resetValidationStateFor(id: Int)
     func setEnableFieldValidationBy(id: Int, enable: Bool)
     func setEnableFieldValidationForAll(_ enable: Bool)

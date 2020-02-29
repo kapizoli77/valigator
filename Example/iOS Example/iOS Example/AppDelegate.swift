@@ -2,9 +2,6 @@
 //  AppDelegate.swift
 //  iOS Example
 //
-//  Created by Kapi Zoltán on 2020. 02. 27..
-//  Copyright © 2020. kapizoli77. All rights reserved.
-//
 
 import UIKit
 

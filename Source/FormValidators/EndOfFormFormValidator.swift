@@ -9,7 +9,7 @@ class EndOfFormFormValidator: BaseFormValidator {
     // MARK: - BaseFormValidator functions
 
     override func validatableFieldsAfterEditStateChanged(for fieldId: Int) -> [FieldValidationWrapper] {
-        let validatableFields = fields.filter({ $0.fieldValidation.shouldValidate })
+        let validatableFields = fields.filter({ $0.fieldValidation.isEnabled })
         guard let index = validatableFields.firstIndex(where: { $0.fieldValidation.fieldId == fieldId }) else {
             return []
         }

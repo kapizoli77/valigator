@@ -10,7 +10,6 @@ platform :ios do
 
   desc "Description of what the lane does"
   lane :build do
-    check_swiftlint
     xcodebuild(workspace: "Valigator.xcworkspace",
         scheme: "iOS Example",
         arch: "x86_64",

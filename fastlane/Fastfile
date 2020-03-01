@@ -1,28 +1,50 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
-
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
-
 default_platform(:ios)
 
+require 'open-uri'
+require 'zip'
+
 platform :ios do
+  before_all do
+    ENV['PROJECT_PATH'] = File.dirname(Dir.pwd)
+  end
+
   desc "Description of what the lane does"
   lane :build do
+    check_swiftlint
     xcodebuild(workspace: "Valigator.xcworkspace",
         scheme: "iOS Example",
         arch: "x86_64",
         sdk: "iphonesimulator13.2",
         configuration: "Debug"
     )
+  end
+
+  desc "Check if SwiftLint is available or download the required version"
+  lane :download_swiftlint do
+    destination = "#{ENV['PROJECT_PATH']}/SwiftLint"
+    version = "0.39.1"
+
+    if File.exist?("#{destination}/swiftlint")
+      local_version = File.read("#{destination}/.version")
+      if version == local_version
+        next
+      else
+        FileUtils.rm_rf(destination)
+      end
+    end
+
+    FileUtils.mkdir_p(destination)
+    url = "https://github.com/realm/SwiftLint/releases/download/#{version}/portable_swiftlint.zip"
+    open(url) do |tempFile|
+      p tempFile
+      Zip::File.open(tempFile) do |zip_file|
+        zip_file.each do |f|
+          fpath = File.join(destination, f.name)
+          zip_file.extract(f, fpath) unless File.exist?(fpath)
+        end
+      end
+    end
+    
+    File.open("#{destination}/.version", 'w') {|f| f.write(version) }
   end
 end

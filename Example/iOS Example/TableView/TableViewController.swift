@@ -42,9 +42,7 @@ class TableViewController: UIViewController {
                 title: "title-\(i)",
                 errorState: .hide,
                 textProvider: { [weak self] fieldId -> String in
-                    guard let self = self else {
-                        return ""
-                    }
+                    guard let self = self else { return "" }
 
                     do {
                         return try self.fieldValueManager.validatableValue(for: fieldId) as String

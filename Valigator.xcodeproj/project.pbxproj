@@ -57,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F409A26240D700200FAD8FD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
 		5FAD69312407198900D0EB06 /* Valigator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Valigator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAD69342407198900D0EB06 /* Valigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Valigator.h; sourceTree = "<group>"; };
 		5FAD69352407198900D0EB06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,9 +119,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F409A25240D6FEA00FAD8FD /* Deployment */ = {
+			isa = PBXGroup;
+			children = (
+				5F409A26240D700200FAD8FD /* Package.swift */,
+			);
+			path = Deployment;
+			sourceTree = "<group>";
+		};
 		5FAD69272407198900D0EB06 = {
 			isa = PBXGroup;
 			children = (
+				5F409A25240D6FEA00FAD8FD /* Deployment */,
 				5FAD69332407198900D0EB06 /* Source */,
 				5FAD693E2407198A00D0EB06 /* Tests */,
 				5FAD69322407198900D0EB06 /* Products */,

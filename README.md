@@ -9,7 +9,7 @@ Swift validator library
 ## Installation
 ### Carthage
 
-Carthage is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Alamofire into your Xcode project using Carthage, specify it in your Cartfile:
+Carthage is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Valigator into your Xcode project using Carthage, specify it in your Cartfile:
 ```ruby
 github "https://github.com/kapizoli77/valigator.git" "master"
 ```

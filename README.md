@@ -13,3 +13,11 @@ Carthage is a decentralized dependency manager that builds your dependencies and
 ```ruby
 github "https://github.com/kapizoli77/valigator.git" "master"
 ```
+
+### Swift Package Manager
+The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler. You can add it with Xcode integrated SPM support or manually, with adding this dependency to your Package.swift file
+```swift
+dependencies: [
+    .package(url: "https://github.com/kapizoli77/valigator", .branch("master"))
+]
+```

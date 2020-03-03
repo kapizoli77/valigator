@@ -7,6 +7,9 @@ Swift library to validate single fields or a whole form
 
 
 ## Installation
+### Cocoapods
+TODO
+
 ### Carthage
 
 Carthage is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Valigator into your Xcode project using Carthage, specify it in your Cartfile:

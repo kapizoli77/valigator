@@ -11,7 +11,7 @@ Swift library to validate single fields or a whole form
 [![Pod version](https://cocoapod-badges.herokuapp.com/v/Valigator/badge.png)](https://github.com/kapizoli77/valigator) [![Pod platforms](https://cocoapod-badges.herokuapp.com/p/Valigator/badge.png)](https://github.com/kapizoli77/valigator)
 [CocoaPods](https://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects. For usage and installation instructions, visit their website. To integrate Valigator into your Xcode project using CocoaPods, specify it in your Podfile:
 ```ruby
-pod 'Alamofire', '~> 0.0.1'
+pod 'Valigator', '~> 0.0.2'
 ```
 
 ### Carthage

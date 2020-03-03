@@ -2,11 +2,14 @@ default_platform(:ios)
 
 require 'open-uri'
 require 'zip'
+require 'versionomy'
 
 platform :ios do
   before_all do
     ENV['PROJECT_PATH'] = File.dirname(Dir.pwd)
   end
+
+  # Build related stuffs
 
   desc "Description of what the lane does"
   lane :build do
@@ -45,5 +48,109 @@ platform :ios do
     end
     
     File.open("#{destination}/.version", 'w') {|f| f.write(version) }
+  end
+
+  # Release related stuffs
+
+  desc "Release the library with the given version"
+  lane :release do |params|
+    patch_readme(params)
+    patch_podspec(params)
+  end
+
+  desc "Patch the Readme file, change the mentioned version number with the given version"
+  lane :patch_readme do |params|
+    check_params(params)
+    version = check_version(params)
+    patch_all = params[:patch_all]
+    patch_readme = params[:patch_readme]
+
+    if patch_all == false || patch_readme == false
+      UI.error "Skip patching Readme.md file!"
+      next
+    end
+
+    if patch_all.nil? && patch_readme.nil?
+      if !UI.confirm("Would you like to pattch the Readme.md file?")
+        UI.error "Skip patching Readme.md file!"
+        next
+      end
+    end
+
+    UI.important "Patching the Readme.md file"
+
+    # TODO: - do it in a general way
+    file = File.read("#{ENV['PROJECT_PATH']}/Readme.md")
+    new_content = file.split("\n")
+    new_content = new_content.map { |word|
+      p word
+      word == "pod 'Valigator', '~> 0.0.2'" ? "pod 'Valigator', '~> #{version}'" : word }.join("\n").strip
+    File.open("#{ENV['PROJECT_PATH']}/Readme.md", 'w') { |line| line.puts new_content }
+
+  end
+
+  desc "Patch the .podspec file, change the mentioned version number with the given version"
+  lane :patch_podspec do |params|
+    check_params(params)
+    version = check_version(params)
+    patch_all = params[:patch_all]
+    patch_podspec = params[:patch_podspec]
+
+    if patch_all == false || patch_podspec == false
+      UI.error "Skip patching .podspec file!"
+      next
+    end
+
+    if patch_all.nil? && patch_podspec.nil?
+      if !UI.confirm("Would you like to pattch the .podspec file?")
+        UI.error "Skip patching .podspec file!"
+        next
+      end
+    end
+
+    # TODO: - Patch the .podspec file
+    p "Patching the .podspec file"
+  end
+
+  desc "Checks the given version, if used or not greater than the last one throws an error"
+  private_lane :check_version do |params|
+    next if ENV['IS_VERSION_CHECKED'] == 'true'
+
+    version = params[:version]
+
+    tags = sh("git tag -l", log: false)
+    tags = tags.split("\n")
+    if tags.include?(version)
+      UI.user_error! "The given version already used: #{version}"
+    end
+
+    last_tag = sh("git tag --sort=committerdate | tail -1", log: false)
+    last_tag = last_tag.strip
+    last_version = Versionomy.parse(last_tag)
+    new_version = Versionomy.parse(version)
+    
+    if new_version <= last_version
+      UI.user_error! "The given version: #{version} is smaller or equal to the last one: #{last_tag}"
+    end
+    
+    ENV['IS_VERSION_CHECKED'] = 'true'
+
+    version
+  end
+
+  desc "Checks the given parameters"
+  private_lane :check_params do |params|
+    version = params[:version]
+    patch_all = params[:patch_all]
+    patch_readme = params[:patch_readme]
+    patch_podspec = params[:patch_podspec]
+
+    if version.nil?
+      UI.user_error! "Missing parameter: version"
+    end
+
+    if !patch_all.nil? && (!patch_readme.nil? || !patch_podspec.nil?)
+      UI.user_error! "Invalid parameters: if patch_all is given, patch_readme and patch_podspec are not allowed!"
+    end
   end
 end

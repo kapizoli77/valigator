@@ -24,7 +24,7 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  
+
   spec.homepage     = "https://github.com/kapizoli77/valigator"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
@@ -62,6 +62,8 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios
   spec.platform     = :ios, "11.0"
+
+  spec.swift_versions = ['5.1']
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "11.0"

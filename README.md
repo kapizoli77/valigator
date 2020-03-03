@@ -8,17 +8,21 @@ Swift library to validate single fields or a whole form
 
 ## Installation
 ### Cocoapods
-TODO
+[![Pod version](https://cocoapod-badges.herokuapp.com/v/Valigator/badge.png)](https://github.com/kapizoli77/valigator) [![Pod platforms](https://cocoapod-badges.herokuapp.com/p/Valigator/badge.png)](https://github.com/kapizoli77/valigator)
+[CocoaPods](https://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects. For usage and installation instructions, visit their website. To integrate Valigator into your Xcode project using CocoaPods, specify it in your Podfile:
+```ruby
+pod 'Alamofire', '~> 0.0.1'
+```
 
 ### Carthage
 
-Carthage is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Valigator into your Xcode project using Carthage, specify it in your Cartfile:
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Valigator into your Xcode project using Carthage, specify it in your Cartfile:
 ```ruby
 github "https://github.com/kapizoli77/valigator.git" "master"
 ```
 
 ### Swift Package Manager
-The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler. You can add it with Xcode integrated SPM support or manually, with adding this dependency to your Package.swift file:
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the swift compiler. You can add it with Xcode integrated SPM support or manually, with adding this dependency to your Package.swift file:
 ```swift
 dependencies: [
     .package(url: "https://github.com/kapizoli77/valigator", .branch("master"))

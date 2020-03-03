@@ -43,6 +43,7 @@ TODO
 
 ## License
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](LICENSE)
+
 Valigator is released under the [MIT License](LICENSE).
 
 ## Feedback is welcome

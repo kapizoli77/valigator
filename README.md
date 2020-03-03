@@ -2,6 +2,7 @@
 
 # Validator
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/kapizoli77/valigator/graphs/commit-activity)
+
 Swift library to validate single fields or a whole form
 
 ## Installation

@@ -3,10 +3,17 @@ default_platform(:ios)
 require 'open-uri'
 require 'zip'
 require 'versionomy'
+require_relative './Util.rb'
 
 platform :ios do
   before_all do
     ENV['PROJECT_PATH'] = File.dirname(Dir.pwd)
+
+    project_name = nil
+    Dir.glob("#{File.dirname(Dir.pwd)}/*.podspec").select { |s| 
+      project_name = File.basename(s, ".podspec")
+    }
+    ENV['PROJECT_NAME'] = project_name
   end
 
   # Build related stuffs
@@ -56,6 +63,14 @@ platform :ios do
   lane :release do |params|
     patch_readme(params)
     patch_podspec(params)
+
+    Git administration
+    sh "git tag #{version}"
+    sh "git push origin --tags"
+    # TODO: - Check actual branch and merge to master
+
+    # Push podspect update
+    sh "pod trunk push #{ENV['PROJECT_NAME']}.podspec"
   end
 
   desc "Patch the Readme file, change the mentioned version number with the given version"
@@ -79,14 +94,12 @@ platform :ios do
 
     UI.important "Patching the Readme.md file"
 
-    # TODO: - do it in a general way
-    file = File.read("#{ENV['PROJECT_PATH']}/Readme.md")
-    new_content = file.split("\n")
-    new_content = new_content.map { |word|
-      p word
-      word == "pod 'Valigator', '~> 0.0.2'" ? "pod 'Valigator', '~> #{version}'" : word }.join("\n").strip
-    File.open("#{ENV['PROJECT_PATH']}/Readme.md", 'w') { |line| line.puts new_content }
+    replaceable_lines = []
+    replaceable_lines.push(Util::ReplaceableLine.new("pod '#{ENV['PROJECT_NAME']}', '~>", "pod '#{ENV['PROJECT_NAME']}', '~> #{version}'"))
+      replaceable_lines.push(Util::ReplaceableLine.new("    .package(url: \"https://github.com/kapizoli77/valigator\"", 
+      "    .package(url: \"https://github.com/kapizoli77/valigator\", .upToNextMinor(from: \"#{version}\"))"))
 
+    replace_lines("#{ENV['PROJECT_PATH']}/Readme.md", replaceable_lines)
   end
 
   desc "Patch the .podspec file, change the mentioned version number with the given version"
@@ -108,15 +121,19 @@ platform :ios do
       end
     end
 
-    # TODO: - Patch the .podspec file
-    p "Patching the .podspec file"
+    UI.important "Patching the .podspec file"
+
+    replaceable_lines = []
+    replaceable_lines.push(Util::ReplaceableLine.new("  spec.version", "  spec.version      = \"#{version}\""))
+
+    replace_lines("#{ENV['PROJECT_PATH']}/#{ENV['PROJECT_NAME']}.podspec", replaceable_lines)
   end
 
   desc "Checks the given version, if used or not greater than the last one throws an error"
   private_lane :check_version do |params|
-    next if ENV['IS_VERSION_CHECKED'] == 'true'
-
     version = params[:version]
+
+    next version if ENV['IS_VERSION_CHECKED'] == 'true'
 
     tags = sh("git tag -l", log: false)
     tags = tags.split("\n")
@@ -152,5 +169,20 @@ platform :ios do
     if !patch_all.nil? && (!patch_readme.nil? || !patch_podspec.nil?)
       UI.user_error! "Invalid parameters: if patch_all is given, patch_readme and patch_podspec are not allowed!"
     end
+  end
+
+  def replace_lines(file_path, replaceable_lines)
+    file = File.read(file_path)
+    new_content = file.split("\n")
+    new_content = new_content.map { |line|
+      new_line = line
+      replaceable_lines.each do |replaceable_line|
+        if line.start_with?(replaceable_line.original_prefix)
+          new_line = replaceable_line.modified_line
+        end
+      end
+      new_line
+    }.join("\n")
+    File.open(file_path, 'w') { |line| line.puts new_content }
   end
 end

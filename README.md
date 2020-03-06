@@ -1,7 +1,7 @@
 ![Valigator](https://github.com/kapizoli77/valigator/raw/master/valigator.png)
 
 # Validator
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/kapizoli77/valigator/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/kapizoli77/valigator/graphs/commit-activity) [![Actions Status](https://github.com/kapizoli77/valigator/workflows/Swift/badge.svg)](https://github.com/kapizoli77/valigator/actions)
 
 Swift library to validate single fields or a whole form
 

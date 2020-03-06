@@ -70,4 +70,5 @@ public struct ValidationRuleResult {
     public let message: String
 }
 
+/// A tuple to store edit and validation state for a field
 public typealias FieldState = (fieldEditState: FieldEditState, fieldValidationState: FieldValidationState)

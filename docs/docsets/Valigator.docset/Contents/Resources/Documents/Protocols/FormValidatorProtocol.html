@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FormValidatorProtocol Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/FormValidatorProtocol" class="dashAnchor"></a>
+    <a title="FormValidatorProtocol Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Valigator Docs</a> (38% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Valigator Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        FormValidatorProtocol Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BaseValidationRule.html">BaseValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CharacterLengthRangeValidationRule.html">CharacterLengthRangeValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EmailValidationRule.html">EmailValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExcludeCharactersValidationRule.html">ExcludeCharactersValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FieldValidationWrapper.html">FieldValidationWrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FieldValidator.html">FieldValidator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FieldValueManager.html">FieldValueManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LowercaseLetterValidationRule.html">LowercaseLetterValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MaxLengthValidationRule.html">MaxLengthValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MinLengthValidationRule.html">MinLengthValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnlyDigitsValidationRule.html">OnlyDigitsValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnlyLetterOrNumberValidationRule.html">OnlyLetterOrNumberValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnlyNumberValidationRule.html">OnlyNumberValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RegexValidationRule.html">RegexValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequiredCheckBoxValidationRule.html">RequiredCheckBoxValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequiredObjectValidationRule.html">RequiredObjectValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequiredStringValidationRule.html">RequiredStringValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UppercaseLetterValidationRule.html">UppercaseLetterValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Valigator.html">Valigator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FieldEditState.html">FieldEditState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FieldValidationState.html">FieldValidationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FieldValueManagerError.html">FieldValueManagerError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ValidationStrategy.html">ValidationStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ValigatorError.html">ValigatorError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FieldValidationDataSource.html">FieldValidationDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FieldValidationDelegate.html">FieldValidationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FieldValidationProtocol.html">FieldValidationProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FormValidatorDataSource.html">FormValidatorDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FormValidatorDelegate.html">FormValidatorDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FormValidatorProtocol.html">FormValidatorProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ValidationRuleProtocol.html">ValidationRuleProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ValigatorDataSource.html">ValigatorDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ValigatorDelegate.html">ValigatorDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ValigatorProtocol.html">ValigatorProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CrossFieldValidationRule.html">CrossFieldValidationRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FieldValidationModel.html">FieldValidationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ValidationRuleResult.html">ValidationRuleResult</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9Valigator10FieldStatea">FieldState</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FormValidatorProtocol</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FormValidatorProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>This protocol contains the public properties and methods of the Form Validation to implement the validation strategy.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP8delegateAA0bC8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP8delegateAA0bC8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FormValidatorDelegate.html">FormValidatorDelegate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP10dataSourceAA0bc4DataF0_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dataSource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP10dataSourceAA0bc4DataF0_pSgvp">dataSource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dataSource</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FormValidatorDataSource.html">FormValidatorDataSource</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP15isAllFieldValidSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isAllFieldValid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP15isAllFieldValidSbvp">isAllFieldValid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isAllFieldValid</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP13registerFieldyyAA0f10ValidationD0_pF"></a>
+                    <a name="//apple_ref/swift/Method/registerField(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP13registerFieldyyAA0f10ValidationD0_pF">registerField(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">registerField</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FieldValidationProtocol.html">FieldValidationProtocol</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP13registerField_6beforeSbAA0f10ValidationD0_p_SitF"></a>
+                    <a name="//apple_ref/swift/Method/registerField(_:before:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP13registerField_6beforeSbAA0f10ValidationD0_p_SitF">registerField(_:before:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">registerField</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FieldValidationProtocol.html">FieldValidationProtocol</a></span><span class="p">,</span> <span class="n">before</span> <span class="nv">beforeId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP13registerField_5afterSbAA0f10ValidationD0_p_SitF"></a>
+                    <a name="//apple_ref/swift/Method/registerField(_:after:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP13registerField_5afterSbAA0f10ValidationD0_p_SitF">registerField(_:after:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">registerField</span><span class="p">(</span><span class="n">_</span> <span class="nv">field</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FieldValidationProtocol.html">FieldValidationProtocol</a></span><span class="p">,</span> <span class="n">after</span> <span class="nv">afterId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP32registerCrossFieldValidationRule05crossghI0yAA0fghI0V_tF"></a>
+                    <a name="//apple_ref/swift/Method/registerCrossFieldValidationRule(crossFieldValidationRule:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP32registerCrossFieldValidationRule05crossghI0yAA0fghI0V_tF">registerCrossFieldValidationRule(crossFieldValidationRule:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">registerCrossFieldValidationRule</span><span class="p">(</span><span class="nv">crossFieldValidationRule</span><span class="p">:</span> <span class="kt"><a href="../Structs/CrossFieldValidationRule.html">CrossFieldValidationRule</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP15validateFieldBy2idySi_tF"></a>
+                    <a name="//apple_ref/swift/Method/validateFieldBy(id:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP15validateFieldBy2idySi_tF">validateFieldBy(id:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">validateFieldBy</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP15validateFieldBy5indexySi_tF"></a>
+                    <a name="//apple_ref/swift/Method/validateFieldBy(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP15validateFieldBy5indexySi_tF">validateFieldBy(index:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">validateFieldBy</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP16validateAllFieldyyF"></a>
+                    <a name="//apple_ref/swift/Method/validateAllField()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP16validateAllFieldyyF">validateAllField()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">validateAllField</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP26fieldEditStateDidChangeFor0E2Id5stateySi_AA05FieldfG0OtF"></a>
+                    <a name="//apple_ref/swift/Method/fieldEditStateDidChangeFor(fieldId:state:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP26fieldEditStateDidChangeFor0E2Id5stateySi_AA05FieldfG0OtF">fieldEditStateDidChangeFor(fieldId:state:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fieldEditStateDidChangeFor</span><span class="p">(</span><span class="nv">fieldId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/FieldEditState.html">FieldEditState</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP8validate17validatableFields20allValidatedManuallyySayAA22FieldValidationWrapperCG_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/validate(validatableFields:allValidatedManually:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP8validate17validatableFields20allValidatedManuallyySayAA22FieldValidationWrapperCG_SbtF">validate(validatableFields:allValidatedManually:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="nv">validatableFields</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/FieldValidationWrapper.html">FieldValidationWrapper</a></span><span class="p">],</span> <span class="nv">allValidatedManually</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP38validatableFieldsAfterEditStateChanged3forSayAA22FieldValidationWrapperCGSi_tF"></a>
+                    <a name="//apple_ref/swift/Method/validatableFieldsAfterEditStateChanged(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP38validatableFieldsAfterEditStateChanged3forSayAA22FieldValidationWrapperCGSi_tF">validatableFieldsAfterEditStateChanged(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">validatableFieldsAfterEditStateChanged</span><span class="p">(</span><span class="k">for</span> <span class="nv">fieldId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/FieldValidationWrapper.html">FieldValidationWrapper</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP24notifyValidationDelegate17validatableFields20allValidatedManuallyySayAA05FieldF7WrapperCG_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/notifyValidationDelegate(validatableFields:allValidatedManually:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP24notifyValidationDelegate17validatableFields20allValidatedManuallyySayAA05FieldF7WrapperCG_SbtF">notifyValidationDelegate(validatableFields:allValidatedManually:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">notifyValidationDelegate</span><span class="p">(</span><span class="nv">validatableFields</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/FieldValidationWrapper.html">FieldValidationWrapper</a></span><span class="p">],</span> <span class="nv">allValidatedManually</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP24validatableCrossFieldsBy0eG0SayAA0F19FieldValidationRuleVGSayAA0iJ7WrapperCG_tF"></a>
+                    <a name="//apple_ref/swift/Method/validatableCrossFieldsBy(validatableFields:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP24validatableCrossFieldsBy0eG0SayAA0F19FieldValidationRuleVGSayAA0iJ7WrapperCG_tF">validatableCrossFieldsBy(validatableFields:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">validatableCrossFieldsBy</span><span class="p">(</span><span class="nv">validatableFields</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/FieldValidationWrapper.html">FieldValidationWrapper</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/CrossFieldValidationRule.html">CrossFieldValidationRule</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP23resetValidationStateFor2idySi_tF"></a>
+                    <a name="//apple_ref/swift/Method/resetValidationStateFor(id:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP23resetValidationStateFor2idySi_tF">resetValidationStateFor(id:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resetValidationStateFor</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP26setEnableFieldValidationBy2id6enableySi_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/setEnableFieldValidationBy(id:enable:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP26setEnableFieldValidationBy2id6enableySi_SbtF">setEnableFieldValidationBy(id:enable:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setEnableFieldValidationBy</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">enable</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP30setEnableFieldValidationForAllyySbF"></a>
+                    <a name="//apple_ref/swift/Method/setEnableFieldValidationForAll(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP30setEnableFieldValidationForAllyySbF">setEnableFieldValidationForAll(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setEnableFieldValidationForAll</span><span class="p">(</span><span class="n">_</span> <span class="nv">enable</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Valigator21FormValidatorProtocolP10fieldState2idAA09FieldEditF0O0eiF0_AA0h10ValidationF0O0ejF0tSgSi_tF"></a>
+                    <a name="//apple_ref/swift/Method/fieldState(id:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Valigator21FormValidatorProtocolP10fieldState2idAA09FieldEditF0O0eiF0_AA0h10ValidationF0O0ejF0tSgSi_tF">fieldState(id:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fieldState</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:9Valigator10FieldStatea">FieldState</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/kapizoli77/valigator" target="_blank" rel="external">kapizoli77</a>. All rights reserved. (Last updated: 2020-03-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

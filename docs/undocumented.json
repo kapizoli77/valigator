@@ -1,0 +1,845 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationEntities.swift",
+      "line": 23,
+      "symbol": "FieldValidationModel.init(fieldId:rules:isEnabled:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationProtocol.swift",
+      "line": 8,
+      "symbol": "FieldValidationDataSource",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationProtocol.swift",
+      "line": 9,
+      "symbol": "FieldValidationDataSource.validatableValue(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationProtocol.swift",
+      "line": 12,
+      "symbol": "FieldValidationDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationProtocol.swift",
+      "line": 13,
+      "symbol": "FieldValidationDelegate.validationDidEnd(fieldId:success:validationRuleResults:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationProtocol.swift",
+      "line": 16,
+      "symbol": "FieldValidationProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationProtocol.swift",
+      "line": 17,
+      "symbol": "FieldValidationProtocol.fieldId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationProtocol.swift",
+      "line": 18,
+      "symbol": "FieldValidationProtocol.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationProtocol.swift",
+      "line": 19,
+      "symbol": "FieldValidationProtocol.dataSource",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationProtocol.swift",
+      "line": 20,
+      "symbol": "FieldValidationProtocol.isEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidationProtocol.swift",
+      "line": 22,
+      "symbol": "FieldValidationProtocol.validateField()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidator.swift",
+      "line": 18,
+      "symbol": "FieldValidator.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidator.swift",
+      "line": 19,
+      "symbol": "FieldValidator.dataSource",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidator.swift",
+      "line": 20,
+      "symbol": "FieldValidator.fieldId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidator.swift",
+      "line": 21,
+      "symbol": "FieldValidator.isEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidator.swift",
+      "line": 25,
+      "symbol": "FieldValidator.init(model:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValidation/FieldValidator.swift",
+      "line": 35,
+      "symbol": "FieldValidator.validateField()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValueManager/FieldValueManager.swift",
+      "line": 6,
+      "symbol": "FieldValueManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValueManager/FieldValueManager.swift",
+      "line": 13,
+      "symbol": "FieldValueManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValueManager/FieldValueManager.swift",
+      "line": 18,
+      "symbol": "FieldValueManager.setValue(_:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValueManager/FieldValueManager.swift",
+      "line": 22,
+      "symbol": "FieldValueManager.validatableValue(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValueManager/FieldValueManagerEntity.swift",
+      "line": 6,
+      "symbol": "FieldValueManagerError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FieldValueManager/FieldValueManagerEntity.swift",
+      "line": 7,
+      "symbol": "FieldValueManagerError.invalidInputType",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/BaseFormValidator.swift",
+      "line": 212,
+      "symbol": "BaseFormValidator.validationDidEnd(fieldId:success:validationRuleResults:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/BaseFormValidator.swift",
+      "line": 226,
+      "symbol": "BaseFormValidator.validatableValue(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FieldValidationWrapper.swift",
+      "line": 14,
+      "symbol": "FieldValidationWrapper.fieldValidation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FieldValidationWrapper.swift",
+      "line": 15,
+      "symbol": "FieldValidationWrapper.fieldEditState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FieldValidationWrapper.swift",
+      "line": 16,
+      "symbol": "FieldValidationWrapper.fieldValidationState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FieldValidationWrapper.swift",
+      "line": 17,
+      "symbol": "FieldValidationWrapper.shouldValdiate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FieldValidationWrapper.swift",
+      "line": 21,
+      "symbol": "FieldValidationWrapper.init(fieldValidation:shouldValdiate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 8,
+      "symbol": "FormValidatorDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 9,
+      "symbol": "FormValidatorDelegate.autoFormValidationDidEnd(success:statusArray:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 10,
+      "symbol": "FormValidatorDelegate.manualFormValidationDidEnd(success:statusArray:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 11,
+      "symbol": "FormValidatorDelegate.fieldValidationDidEnd(fieldId:success:validationRuleResults:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 14,
+      "symbol": "FormValidatorDataSource",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 15,
+      "symbol": "FormValidatorDataSource.validatableValue(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 22,
+      "symbol": "FormValidatorProtocol.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 23,
+      "symbol": "FormValidatorProtocol.dataSource",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 24,
+      "symbol": "FormValidatorProtocol.isAllFieldValid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 26,
+      "symbol": "FormValidatorProtocol.registerField(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 27,
+      "symbol": "FormValidatorProtocol.registerField(_:before:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 28,
+      "symbol": "FormValidatorProtocol.registerField(_:after:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 29,
+      "symbol": "FormValidatorProtocol.registerCrossFieldValidationRule(crossFieldValidationRule:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 30,
+      "symbol": "FormValidatorProtocol.validateFieldBy(id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 31,
+      "symbol": "FormValidatorProtocol.validateFieldBy(index:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 32,
+      "symbol": "FormValidatorProtocol.validateAllField()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 33,
+      "symbol": "FormValidatorProtocol.fieldEditStateDidChangeFor(fieldId:state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 34,
+      "symbol": "FormValidatorProtocol.validate(validatableFields:allValidatedManually:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 35,
+      "symbol": "FormValidatorProtocol.validatableFieldsAfterEditStateChanged(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 36,
+      "symbol": "FormValidatorProtocol.notifyValidationDelegate(validatableFields:allValidatedManually:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 37,
+      "symbol": "FormValidatorProtocol.validatableCrossFieldsBy(validatableFields:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 38,
+      "symbol": "FormValidatorProtocol.resetValidationStateFor(id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 39,
+      "symbol": "FormValidatorProtocol.setEnableFieldValidationBy(id:enable:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 40,
+      "symbol": "FormValidatorProtocol.setEnableFieldValidationForAll(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/FormValidators/FormValidatorProtocol.swift",
+      "line": 41,
+      "symbol": "FormValidatorProtocol.fieldState(id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/Valigator.swift",
+      "line": 8,
+      "symbol": "Valigator",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/Valigator.swift",
+      "line": 24,
+      "symbol": "Valigator.init(validationStrategy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/Valigator.swift",
+      "line": 32,
+      "symbol": "Valigator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/Valigator.swift",
+      "line": 87,
+      "symbol": "Valigator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/Valigator.swift",
+      "line": 88,
+      "symbol": "Valigator.autoFormValidationDidEnd(success:statusArray:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/Valigator.swift",
+      "line": 92,
+      "symbol": "Valigator.manualFormValidationDidEnd(success:statusArray:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/Valigator.swift",
+      "line": 96,
+      "symbol": "Valigator.fieldValidationDidEnd(fieldId:success:validationRuleResults:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/Valigator.swift",
+      "line": 103,
+      "symbol": "Valigator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/Valigator.swift",
+      "line": 104,
+      "symbol": "Valigator.validatableValue(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/ValigatorEntities.swift",
+      "line": 13,
+      "symbol": "ValigatorError.noDataSource",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/Services/ValigatorProtocol.swift",
+      "line": 153,
+      "symbol": "ValigatorDelegate.fieldValidationDidEnd(fieldId:success:messages:validationRuleResults:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/BaseValidationRule.swift",
+      "line": 8,
+      "symbol": "BaseValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/BaseValidationRule.swift",
+      "line": 11,
+      "symbol": "BaseValidationRule.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/BaseValidationRule.swift",
+      "line": 12,
+      "symbol": "BaseValidationRule.tag",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/BaseValidationRule.swift",
+      "line": 16,
+      "symbol": "BaseValidationRule.init(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/BaseValidationRule.swift",
+      "line": 22,
+      "symbol": "BaseValidationRule.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/CharacterRangeInputRule.swift",
+      "line": 8,
+      "symbol": "CharacterLengthRangeValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/CharacterRangeInputRule.swift",
+      "line": 11,
+      "symbol": "CharacterLengthRangeValidationRule.minLength",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/CharacterRangeInputRule.swift",
+      "line": 12,
+      "symbol": "CharacterLengthRangeValidationRule.maxLength",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/CharacterRangeInputRule.swift",
+      "line": 16,
+      "symbol": "CharacterLengthRangeValidationRule.init(message:minLength:maxLength:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/CharacterRangeInputRule.swift",
+      "line": 25,
+      "symbol": "CharacterLengthRangeValidationRule.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/CrossFieldValidationRule.swift",
+      "line": 8,
+      "symbol": "CrossFieldValidationRule",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/CrossFieldValidationRule.swift",
+      "line": 16,
+      "symbol": "CrossFieldValidationRule.init(relatedFieldIds:validateClosure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/EmailValidationRule.swift",
+      "line": 8,
+      "symbol": "EmailValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/EmailValidationRule.swift",
+      "line": 17,
+      "symbol": "EmailValidationRule.init(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/ExcludeCharactersRule.swift",
+      "line": 8,
+      "symbol": "ExcludeCharactersValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/ExcludeCharactersRule.swift",
+      "line": 11,
+      "symbol": "ExcludeCharactersValidationRule.excludedCharacters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/ExcludeCharactersRule.swift",
+      "line": 15,
+      "symbol": "ExcludeCharactersValidationRule.init(message:excludedCharacters:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/ExcludeCharactersRule.swift",
+      "line": 23,
+      "symbol": "ExcludeCharactersValidationRule.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/LowercaseLetterValidationRule.swift",
+      "line": 8,
+      "symbol": "LowercaseLetterValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/LowercaseLetterValidationRule.swift",
+      "line": 17,
+      "symbol": "LowercaseLetterValidationRule.init(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/MaxLengthValidationRule.swift",
+      "line": 8,
+      "symbol": "MaxLengthValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/MaxLengthValidationRule.swift",
+      "line": 11,
+      "symbol": "MaxLengthValidationRule.maxLength",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/MaxLengthValidationRule.swift",
+      "line": 15,
+      "symbol": "MaxLengthValidationRule.init(message:maxLength:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/MaxLengthValidationRule.swift",
+      "line": 23,
+      "symbol": "MaxLengthValidationRule.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/MinLengthValidationRule.swift",
+      "line": 8,
+      "symbol": "MinLengthValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/MinLengthValidationRule.swift",
+      "line": 11,
+      "symbol": "MinLengthValidationRule.minLength",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/MinLengthValidationRule.swift",
+      "line": 15,
+      "symbol": "MinLengthValidationRule.init(message:minLength:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/MinLengthValidationRule.swift",
+      "line": 23,
+      "symbol": "MinLengthValidationRule.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/OnlyDigitsValidationRule.swift",
+      "line": 8,
+      "symbol": "OnlyDigitsValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/OnlyDigitsValidationRule.swift",
+      "line": 17,
+      "symbol": "OnlyDigitsValidationRule.init(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/OnlyLetterOrNumberValidationRule.swift",
+      "line": 8,
+      "symbol": "OnlyLetterOrNumberValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/OnlyLetterOrNumberValidationRule.swift",
+      "line": 17,
+      "symbol": "OnlyLetterOrNumberValidationRule.init(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/OnlyLetterOrNumberValidationRule.swift",
+      "line": 23,
+      "symbol": "OnlyLetterOrNumberValidationRule.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/OnlyNumberValidationRule.swift",
+      "line": 8,
+      "symbol": "OnlyNumberValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/OnlyNumberValidationRule.swift",
+      "line": 17,
+      "symbol": "OnlyNumberValidationRule.init(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RegexValidationRule.swift",
+      "line": 8,
+      "symbol": "RegexValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RegexValidationRule.swift",
+      "line": 15,
+      "symbol": "RegexValidationRule.init(regex:message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RegexValidationRule.swift",
+      "line": 23,
+      "symbol": "RegexValidationRule.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RequiredCheckBoxValidationRule.swift",
+      "line": 8,
+      "symbol": "RequiredCheckBoxValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RequiredCheckBoxValidationRule.swift",
+      "line": 11,
+      "symbol": "RequiredCheckBoxValidationRule.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RequiredCheckBoxValidationRule.swift",
+      "line": 12,
+      "symbol": "RequiredCheckBoxValidationRule.tag",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RequiredCheckBoxValidationRule.swift",
+      "line": 16,
+      "symbol": "RequiredCheckBoxValidationRule.init(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RequiredCheckBoxValidationRule.swift",
+      "line": 23,
+      "symbol": "RequiredCheckBoxValidationRule",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RequiredCheckBoxValidationRule.swift",
+      "line": 24,
+      "symbol": "RequiredCheckBoxValidationRule.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RequiredObjectValidationRule.swift",
+      "line": 8,
+      "symbol": "RequiredObjectValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RequiredObjectValidationRule.swift",
+      "line": 11,
+      "symbol": "RequiredObjectValidationRule.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RequiredStringValidationRule.swift",
+      "line": 8,
+      "symbol": "RequiredStringValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/RequiredStringValidationRule.swift",
+      "line": 11,
+      "symbol": "RequiredStringValidationRule.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/UppercaseLetterValidationRule.swift",
+      "line": 8,
+      "symbol": "UppercaseLetterValidationRule",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/UppercaseLetterValidationRule.swift",
+      "line": 17,
+      "symbol": "UppercaseLetterValidationRule.init(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/ValidationRuleProtocol.swift",
+      "line": 14,
+      "symbol": "ValidationRuleProtocol.InputType",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/ValidationRuleProtocol.swift",
+      "line": 18,
+      "symbol": "ValidationRuleProtocol.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/ValidationRuleProtocol.swift",
+      "line": 19,
+      "symbol": "ValidationRuleProtocol.tag",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zkapi/mito/ios/valigator/Source/ValidationRules/ValidationRuleProtocol.swift",
+      "line": 23,
+      "symbol": "ValidationRuleProtocol.validate(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/zkapi/mito/ios/valigator"
+}

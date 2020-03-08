@@ -5,9 +5,7 @@
 
 import Foundation
 
-/**
- This class contains the logic to validate a single field.
- */
+/// This class contains the logic to validate a single field.
 public final class FieldValidator<InputType, Rule: ValidationRuleProtocol> where Rule.InputType == InputType {
     // MARK: - Properties
 
@@ -15,13 +13,22 @@ public final class FieldValidator<InputType, Rule: ValidationRuleProtocol> where
 
     // MARK: - FieldValidationProtocol properties
 
+    /// The object that acts as the delegate of FieldValidation
     public weak var delegate: FieldValidationDelegate?
+
+    /// The object that acts as the data source of FieldValidation
     public weak var dataSource: FieldValidationDataSource?
+
+    /// Field identifier
     public let fieldId: Int
+
+    /// A Boolean value indicating that the validation process is enabled for the given field
     public var isEnabled: Bool
 
     // MARK: - Initialization
 
+    /// Constructor
+    /// - Parameter model: Field validation model
     public init(model: FieldValidationModel<InputType, Rule>) {
         self.fieldId = model.fieldId
         self.rules = model.rules
@@ -32,6 +39,7 @@ public final class FieldValidator<InputType, Rule: ValidationRuleProtocol> where
 // MARK: - FieldValidationProtocol
 
 extension FieldValidator: FieldValidationProtocol {
+    /// Validates the given field
     public func validateField() {
         guard let dataSource = dataSource else {
             assertionFailure("dataSource cannot be nil")

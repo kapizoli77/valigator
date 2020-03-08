@@ -30,7 +30,7 @@ class TableViewController: UIViewController {
         super.viewDidLoad()
 
         generateViewModels()
-        registerValidationService()
+        registerValigator()
     }
 
     // MARK: - Functions
@@ -55,13 +55,13 @@ class TableViewController: UIViewController {
         }
     }
 
-    private func registerValidationService() {
+    private func registerValigator() {
         valigator.delegate = self
         valigator.dataSource = self
 
         for i in 0...viewModels.count {
-            let rules = [RequiredStringValidationRule(message: "This field is required")]
-            let field = FieldValidationModel(fieldId: i, rules: rules)
+            let requiredRule = RequiredStringValidationRule(message: "This field is required")
+            let field = FieldValidationModel(fieldId: i, rules: [requiredRule])
             valigator.registerField(field)
         }
     }

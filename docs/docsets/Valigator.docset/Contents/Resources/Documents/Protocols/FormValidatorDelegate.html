@@ -14,7 +14,7 @@
     <a title="FormValidatorDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Valigator Docs</a> (38% documented)</p>
+        <p><a href="../index.html">Valigator Docs</a> (54% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -189,7 +189,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Methods for managing validation process for a whole form</p>
 
           </section>
           <section class="section task-group-section">
@@ -208,7 +208,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called when a validation process finished for all validatable field after automatic validation. The logic described in validation strategy.</p>
 
                       </div>
                       <div class="declaration">
@@ -218,6 +218,37 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">autoFormValidationDidEnd</span><span class="p">(</span><span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">statusArray</span><span class="p">:</span> <span class="p">[(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">editState</span><span class="p">:</span> <span class="kt"><a href="../Enums/FieldEditState.html">FieldEditState</a></span><span class="p">,</span> <span class="nv">validationState</span><span class="p">:</span> <span class="kt"><a href="../Enums/FieldValidationState.html">FieldValidationState</a></span><span class="p">)])</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>represents the success of the validation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>statusArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>contains the edit and validation state for every validatable field.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -235,7 +266,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called when a validation process finished for all validatable field, when we call validateAllField method manually.</p>
 
                       </div>
                       <div class="declaration">
@@ -245,6 +276,37 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">manualFormValidationDidEnd</span><span class="p">(</span><span class="nv">success</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">statusArray</span><span class="p">:</span> <span class="p">[(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">editState</span><span class="p">:</span> <span class="kt"><a href="../Enums/FieldEditState.html">FieldEditState</a></span><span class="p">,</span> <span class="nv">validationState</span><span class="p">:</span> <span class="kt"><a href="../Enums/FieldValidationState.html">FieldValidationState</a></span><span class="p">)])</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>represents the success of the validation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>statusArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>contains the edit and validation state for every validatable field.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -262,7 +324,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called when a validation process finished for a specific field.</p>
 
                       </div>
                       <div class="declaration">
@@ -273,6 +335,62 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fieldId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>identifier of the field.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>represents the success of the validation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>messages</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array of the validation error messages.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>validationRuleResults</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array of tuple that contains the validation result for each rule.
+Rules are identified by tag, if tag was not defined for the rule its result will not appear in the array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -281,7 +399,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/kapizoli77/valigator" target="_blank" rel="external">kapizoli77</a>. All rights reserved. (Last updated: 2020-03-06)</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/kapizoli77/valigator" target="_blank" rel="external">kapizoli77</a>. All rights reserved. (Last updated: 2020-03-08)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

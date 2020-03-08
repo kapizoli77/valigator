@@ -9,7 +9,7 @@ import Foundation
 public struct FieldValidationModel<InputType, Rule: ValidationRuleProtocol> where Rule.InputType == InputType {
     // MARK: - Properties
 
-    /// Identifier of the field
+    /// Field identifier
     public let fieldId: Int
 
     /// Registered validation rules

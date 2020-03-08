@@ -59,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		5F409A26240D700200FAD8FD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
-		5F409A2B240DF07F00FAD8FD /* Valigator.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = Valigator.podspec; sourceTree = SOURCE_ROOT; };
+		5F409A2B240DF07F00FAD8FD /* Valigator.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Valigator.podspec; sourceTree = SOURCE_ROOT; };
 		5FAD69312407198900D0EB06 /* Valigator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Valigator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAD69342407198900D0EB06 /* Valigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Valigator.h; sourceTree = "<group>"; };
 		5FAD69352407198900D0EB06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,13 +220,13 @@
 		5FAD696624071C6F00D0EB06 /* FormValidators */ = {
 			isa = PBXGroup;
 			children = (
-				5FAD696724071C6F00D0EB06 /* EndOfFieldFormValidator.swift */,
+				5FAD696D24071C6F00D0EB06 /* FormValidatorProtocol.swift */,
 				5FAD696824071C6F00D0EB06 /* BaseFormValidator.swift */,
+				5FAD696724071C6F00D0EB06 /* EndOfFieldFormValidator.swift */,
 				5FAD696924071C6F00D0EB06 /* FieldValidationWrapper.swift */,
 				5FAD696A24071C6F00D0EB06 /* DuringEditFormValidator.swift */,
 				5FAD696B24071C6F00D0EB06 /* NeverFormValidator.swift */,
 				5FAD696C24071C6F00D0EB06 /* EndOfFormFormValidator.swift */,
-				5FAD696D24071C6F00D0EB06 /* FormValidatorProtocol.swift */,
 			);
 			path = FormValidators;
 			sourceTree = "<group>";

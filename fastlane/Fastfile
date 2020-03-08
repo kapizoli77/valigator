@@ -64,7 +64,7 @@ platform :ios do
     patch_readme(params)
     patch_podspec(params)
 
-    Git administration
+    #Git administration
     sh "git tag #{version}"
     sh "git push origin --tags"
     # TODO: - Check actual branch and merge to master

@@ -1,0 +1,25 @@
+PODS:
+  - RxSwift (6.0.0)
+  - Valigator/Core (1.0.0)
+  - Valigator/RxValigator (1.0.0):
+    - RxSwift (~> 6.0)
+    - Valigator/Core
+
+DEPENDENCIES:
+  - Valigator/RxValigator (from `../..`)
+
+SPEC REPOS:
+  trunk:
+    - RxSwift
+
+EXTERNAL SOURCES:
+  Valigator:
+    :path: "../.."
+
+SPEC CHECKSUMS:
+  RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
+  Valigator: 5784df03cf6474eefa14e44d9c1d56a1b93b2280
+
+PODFILE CHECKSUM: ee8371ca51a515b11666171a7fa466f9a3d1ffc6
+
+COCOAPODS: 1.9.0

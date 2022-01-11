@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4427E174277AF8E100167B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E173277AF8E100167B8C /* AppDelegate.swift */; };
+		4427E176277AF8E100167B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E175277AF8E100167B8C /* SceneDelegate.swift */; };
+		4427E178277AF8E100167B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E177277AF8E100167B8C /* ViewController.swift */; };
+		4427E17B277AF8E100167B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4427E179277AF8E100167B8C /* Main.storyboard */; };
+		4427E17D277AF8E300167B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4427E17C277AF8E300167B8C /* Assets.xcassets */; };
+		4427E180277AF8E300167B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4427E17E277AF8E300167B8C /* LaunchScreen.storyboard */; };
+		4427E188277AF8FC00167B8C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E187277AF8FC00167B8C /* ViewModel.swift */; };
+		4427E18B277AF95800167B8C /* Valigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E18A277AF95800167B8C /* Valigator.swift */; };
+		4427E18E277AFD3F00167B8C /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E18D277AFD3F00167B8C /* Optional+Extensions.swift */; };
+		4427E199277C53D800167B8C /* ValigatorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E198277C53D800167B8C /* ValigatorBuilder.swift */; };
+		4427E19C277C541200167B8C /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E19B277C541200167B8C /* Weak.swift */; };
+		4427E19F277C544000167B8C /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E19E277C544000167B8C /* ValidationRule.swift */; };
+		4427E1A1277C545500167B8C /* Required.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1A0277C545500167B8C /* Required.swift */; };
+		4427E1A3277C547300167B8C /* FieldWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1A2277C547300167B8C /* FieldWrapper.swift */; };
+		4427E1A5277C549200167B8C /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1A4277C549200167B8C /* Field.swift */; };
+		4427E1A8277C54D000167B8C /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1A7277C54D000167B8C /* Validatable.swift */; };
+		4427E1AF277C553E00167B8C /* UITextField+Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1AE277C553E00167B8C /* UITextField+Validatable.swift */; };
+		4427E1B1277C556400167B8C /* UITextView+Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1B0277C556400167B8C /* UITextView+Validatable.swift */; };
+		4427E1B3277C569D00167B8C /* ValidationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1B2277C569D00167B8C /* ValidationStrategy.swift */; };
+		4427E1B6277C56DC00167B8C /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1B5277C56DC00167B8C /* FormValidator.swift */; };
+		4427E1B8277C575E00167B8C /* BaseFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1B7277C575E00167B8C /* BaseFormValidator.swift */; };
+		4427E1BA277C5ADB00167B8C /* DuringEditFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1B9277C5ADB00167B8C /* DuringEditFormValidator.swift */; };
+		4427E1BC277C5AF500167B8C /* EndOfFieldFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1BB277C5AF500167B8C /* EndOfFieldFormValidator.swift */; };
+		4427E1BE277C5B1300167B8C /* EndOfFormFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1BD277C5B1300167B8C /* EndOfFormFormValidator.swift */; };
+		4427E1C32781AACA00167B8C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1C22781AAC900167B8C /* CustomTextField.swift */; };
+		4427E1C7278240BF00167B8C /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1C6278240BF00167B8C /* Regex.swift */; };
+		4427E1C9278240D900167B8C /* SingleFieldRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1C8278240D900167B8C /* SingleFieldRule.swift */; };
+		4427E1CB278240F000167B8C /* CrossFieldRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1CA278240F000167B8C /* CrossFieldRule.swift */; };
+		4427E1CD278254B400167B8C /* EqualCrossCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1CC278254B300167B8C /* EqualCrossCheck.swift */; };
+		4427E1CF278255D700167B8C /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1CE278255D700167B8C /* Email.swift */; };
+		4427E1D12782567500167B8C /* LowercaseLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1D02782567500167B8C /* LowercaseLetter.swift */; };
+		4427E1D3278256A000167B8C /* UppercaseLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1D2278256A000167B8C /* UppercaseLetter.swift */; };
+		4427E1D5278256C400167B8C /* OnlyDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1D4278256C400167B8C /* OnlyDigits.swift */; };
+		4427E1D7278256E400167B8C /* OnlyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1D6278256E400167B8C /* OnlyNumber.swift */; };
+		4427E1D92782570200167B8C /* OnlyLetterOrNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1D82782570200167B8C /* OnlyLetterOrNumber.swift */; };
+		4427E1DB2782574E00167B8C /* CharacterLengthRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4427E1DA2782574E00167B8C /* CharacterLengthRange.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4427E170277AF8E100167B8C /* Valigator2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valigator2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4427E173277AF8E100167B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4427E175277AF8E100167B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4427E177277AF8E100167B8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4427E17A277AF8E100167B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4427E17C277AF8E300167B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4427E17F277AF8E300167B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4427E181277AF8E300167B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4427E187277AF8FC00167B8C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4427E18A277AF95800167B8C /* Valigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valigator.swift; sourceTree = "<group>"; };
+		4427E18D277AFD3F00167B8C /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
+		4427E198277C53D800167B8C /* ValigatorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValigatorBuilder.swift; sourceTree = "<group>"; };
+		4427E19B277C541200167B8C /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		4427E19E277C544000167B8C /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		4427E1A0277C545500167B8C /* Required.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Required.swift; sourceTree = "<group>"; };
+		4427E1A2277C547300167B8C /* FieldWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldWrapper.swift; sourceTree = "<group>"; };
+		4427E1A4277C549200167B8C /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		4427E1A7277C54D000167B8C /* Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		4427E1AE277C553E00167B8C /* UITextField+Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Validatable.swift"; sourceTree = "<group>"; };
+		4427E1B0277C556400167B8C /* UITextView+Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Validatable.swift"; sourceTree = "<group>"; };
+		4427E1B2277C569D00167B8C /* ValidationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationStrategy.swift; sourceTree = "<group>"; };
+		4427E1B5277C56DC00167B8C /* FormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
+		4427E1B7277C575E00167B8C /* BaseFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFormValidator.swift; sourceTree = "<group>"; };
+		4427E1B9277C5ADB00167B8C /* DuringEditFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuringEditFormValidator.swift; sourceTree = "<group>"; };
+		4427E1BB277C5AF500167B8C /* EndOfFieldFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfFieldFormValidator.swift; sourceTree = "<group>"; };
+		4427E1BD277C5B1300167B8C /* EndOfFormFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfFormFormValidator.swift; sourceTree = "<group>"; };
+		4427E1C22781AAC900167B8C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		4427E1C6278240BF00167B8C /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		4427E1C8278240D900167B8C /* SingleFieldRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFieldRule.swift; sourceTree = "<group>"; };
+		4427E1CA278240F000167B8C /* CrossFieldRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossFieldRule.swift; sourceTree = "<group>"; };
+		4427E1CC278254B300167B8C /* EqualCrossCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualCrossCheck.swift; sourceTree = "<group>"; };
+		4427E1CE278255D700167B8C /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		4427E1D02782567500167B8C /* LowercaseLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowercaseLetter.swift; sourceTree = "<group>"; };
+		4427E1D2278256A000167B8C /* UppercaseLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UppercaseLetter.swift; sourceTree = "<group>"; };
+		4427E1D4278256C400167B8C /* OnlyDigits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyDigits.swift; sourceTree = "<group>"; };
+		4427E1D6278256E400167B8C /* OnlyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyNumber.swift; sourceTree = "<group>"; };
+		4427E1D82782570200167B8C /* OnlyLetterOrNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyLetterOrNumber.swift; sourceTree = "<group>"; };
+		4427E1DA2782574E00167B8C /* CharacterLengthRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLengthRange.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4427E16D277AF8E100167B8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4427E167277AF8E100167B8C = {
+			isa = PBXGroup;
+			children = (
+				4427E172277AF8E100167B8C /* Valigator2 */,
+				4427E171277AF8E100167B8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4427E171277AF8E100167B8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4427E170277AF8E100167B8C /* Valigator2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4427E172277AF8E100167B8C /* Valigator2 */ = {
+			isa = PBXGroup;
+			children = (
+				4427E189277AF94400167B8C /* Valigator */,
+				4427E173277AF8E100167B8C /* AppDelegate.swift */,
+				4427E175277AF8E100167B8C /* SceneDelegate.swift */,
+				4427E177277AF8E100167B8C /* ViewController.swift */,
+				4427E187277AF8FC00167B8C /* ViewModel.swift */,
+				4427E1C22781AAC900167B8C /* CustomTextField.swift */,
+				4427E179277AF8E100167B8C /* Main.storyboard */,
+				4427E17C277AF8E300167B8C /* Assets.xcassets */,
+				4427E17E277AF8E300167B8C /* LaunchScreen.storyboard */,
+				4427E181277AF8E300167B8C /* Info.plist */,
+			);
+			path = Valigator2;
+			sourceTree = "<group>";
+		};
+		4427E189277AF94400167B8C /* Valigator */ = {
+			isa = PBXGroup;
+			children = (
+				4427E1B4277C56BA00167B8C /* FormValidation */,
+				4427E1A9277C54E400167B8C /* UIComponents */,
+				4427E19D277C543200167B8C /* FieldValidation */,
+				4427E19A277C540700167B8C /* Utils */,
+				4427E18A277AF95800167B8C /* Valigator.swift */,
+				4427E1B2277C569D00167B8C /* ValidationStrategy.swift */,
+				4427E198277C53D800167B8C /* ValigatorBuilder.swift */,
+				4427E18C277AFD2C00167B8C /* Extensions */,
+			);
+			path = Valigator;
+			sourceTree = "<group>";
+		};
+		4427E18C277AFD2C00167B8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4427E18D277AFD3F00167B8C /* Optional+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4427E19A277C540700167B8C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4427E19B277C541200167B8C /* Weak.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4427E19D277C543200167B8C /* FieldValidation */ = {
+			isa = PBXGroup;
+			children = (
+				4427E1A6277C54AE00167B8C /* Rules */,
+				4427E1A4277C549200167B8C /* Field.swift */,
+				4427E1A2277C547300167B8C /* FieldWrapper.swift */,
+				4427E1A7277C54D000167B8C /* Validatable.swift */,
+			);
+			path = FieldValidation;
+			sourceTree = "<group>";
+		};
+		4427E1A6277C54AE00167B8C /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				4427E19E277C544000167B8C /* ValidationRule.swift */,
+				4427E1C5278240A400167B8C /* CrossField */,
+				4427E1C42782409700167B8C /* SingleField */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		4427E1A9277C54E400167B8C /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				4427E1AE277C553E00167B8C /* UITextField+Validatable.swift */,
+				4427E1B0277C556400167B8C /* UITextView+Validatable.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		4427E1B4277C56BA00167B8C /* FormValidation */ = {
+			isa = PBXGroup;
+			children = (
+				4427E1B5277C56DC00167B8C /* FormValidator.swift */,
+				4427E1B7277C575E00167B8C /* BaseFormValidator.swift */,
+				4427E1B9277C5ADB00167B8C /* DuringEditFormValidator.swift */,
+				4427E1BB277C5AF500167B8C /* EndOfFieldFormValidator.swift */,
+				4427E1BD277C5B1300167B8C /* EndOfFormFormValidator.swift */,
+			);
+			path = FormValidation;
+			sourceTree = "<group>";
+		};
+		4427E1C42782409700167B8C /* SingleField */ = {
+			isa = PBXGroup;
+			children = (
+				4427E1A0277C545500167B8C /* Required.swift */,
+				4427E1C8278240D900167B8C /* SingleFieldRule.swift */,
+				4427E1C6278240BF00167B8C /* Regex.swift */,
+				4427E1CE278255D700167B8C /* Email.swift */,
+				4427E1D02782567500167B8C /* LowercaseLetter.swift */,
+				4427E1D4278256C400167B8C /* OnlyDigits.swift */,
+				4427E1D6278256E400167B8C /* OnlyNumber.swift */,
+				4427E1D82782570200167B8C /* OnlyLetterOrNumber.swift */,
+				4427E1DA2782574E00167B8C /* CharacterLengthRange.swift */,
+				4427E1D2278256A000167B8C /* UppercaseLetter.swift */,
+			);
+			path = SingleField;
+			sourceTree = "<group>";
+		};
+		4427E1C5278240A400167B8C /* CrossField */ = {
+			isa = PBXGroup;
+			children = (
+				4427E1CA278240F000167B8C /* CrossFieldRule.swift */,
+				4427E1CC278254B300167B8C /* EqualCrossCheck.swift */,
+			);
+			path = CrossField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4427E16F277AF8E100167B8C /* Valigator2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4427E184277AF8E300167B8C /* Build configuration list for PBXNativeTarget "Valigator2" */;
+			buildPhases = (
+				4427E16C277AF8E100167B8C /* Sources */,
+				4427E16D277AF8E100167B8C /* Frameworks */,
+				4427E16E277AF8E100167B8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Valigator2;
+			productName = Valigator2;
+			productReference = 4427E170277AF8E100167B8C /* Valigator2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4427E168277AF8E100167B8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					4427E16F277AF8E100167B8C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 4427E16B277AF8E100167B8C /* Build configuration list for PBXProject "Valigator2" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4427E167277AF8E100167B8C;
+			productRefGroup = 4427E171277AF8E100167B8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4427E16F277AF8E100167B8C /* Valigator2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4427E16E277AF8E100167B8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4427E180277AF8E300167B8C /* LaunchScreen.storyboard in Resources */,
+				4427E17D277AF8E300167B8C /* Assets.xcassets in Resources */,
+				4427E17B277AF8E100167B8C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4427E16C277AF8E100167B8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4427E178277AF8E100167B8C /* ViewController.swift in Sources */,
+				4427E18E277AFD3F00167B8C /* Optional+Extensions.swift in Sources */,
+				4427E1BC277C5AF500167B8C /* EndOfFieldFormValidator.swift in Sources */,
+				4427E1A5277C549200167B8C /* Field.swift in Sources */,
+				4427E1B3277C569D00167B8C /* ValidationStrategy.swift in Sources */,
+				4427E1D7278256E400167B8C /* OnlyNumber.swift in Sources */,
+				4427E1DB2782574E00167B8C /* CharacterLengthRange.swift in Sources */,
+				4427E1D5278256C400167B8C /* OnlyDigits.swift in Sources */,
+				4427E1CF278255D700167B8C /* Email.swift in Sources */,
+				4427E1AF277C553E00167B8C /* UITextField+Validatable.swift in Sources */,
+				4427E174277AF8E100167B8C /* AppDelegate.swift in Sources */,
+				4427E1A3277C547300167B8C /* FieldWrapper.swift in Sources */,
+				4427E1D12782567500167B8C /* LowercaseLetter.swift in Sources */,
+				4427E1CD278254B400167B8C /* EqualCrossCheck.swift in Sources */,
+				4427E188277AF8FC00167B8C /* ViewModel.swift in Sources */,
+				4427E1A1277C545500167B8C /* Required.swift in Sources */,
+				4427E1D92782570200167B8C /* OnlyLetterOrNumber.swift in Sources */,
+				4427E176277AF8E100167B8C /* SceneDelegate.swift in Sources */,
+				4427E1BA277C5ADB00167B8C /* DuringEditFormValidator.swift in Sources */,
+				4427E1C7278240BF00167B8C /* Regex.swift in Sources */,
+				4427E1CB278240F000167B8C /* CrossFieldRule.swift in Sources */,
+				4427E1C32781AACA00167B8C /* CustomTextField.swift in Sources */,
+				4427E19C277C541200167B8C /* Weak.swift in Sources */,
+				4427E1BE277C5B1300167B8C /* EndOfFormFormValidator.swift in Sources */,
+				4427E1D3278256A000167B8C /* UppercaseLetter.swift in Sources */,
+				4427E1A8277C54D000167B8C /* Validatable.swift in Sources */,
+				4427E1B1277C556400167B8C /* UITextView+Validatable.swift in Sources */,
+				4427E1B8277C575E00167B8C /* BaseFormValidator.swift in Sources */,
+				4427E19F277C544000167B8C /* ValidationRule.swift in Sources */,
+				4427E199277C53D800167B8C /* ValigatorBuilder.swift in Sources */,
+				4427E1B6277C56DC00167B8C /* FormValidator.swift in Sources */,
+				4427E1C9278240D900167B8C /* SingleFieldRule.swift in Sources */,
+				4427E18B277AF95800167B8C /* Valigator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4427E179277AF8E100167B8C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4427E17A277AF8E100167B8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4427E17E277AF8E300167B8C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4427E17F277AF8E300167B8C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4427E182277AF8E300167B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4427E183277AF8E300167B8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4427E185277AF8E300167B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Valigator2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kapizoli.Valigator2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4427E186277AF8E300167B8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Valigator2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kapizoli.Valigator2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4427E16B277AF8E100167B8C /* Build configuration list for PBXProject "Valigator2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4427E182277AF8E300167B8C /* Debug */,
+				4427E183277AF8E300167B8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4427E184277AF8E300167B8C /* Build configuration list for PBXNativeTarget "Valigator2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4427E185277AF8E300167B8C /* Debug */,
+				4427E186277AF8E300167B8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4427E168277AF8E100167B8C /* Project object */;
+}

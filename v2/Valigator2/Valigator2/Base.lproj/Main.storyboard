@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Valigator2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naL-3t-qLt" customClass="CustomTextField" customModule="Valigator2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="123" width="374" height="43"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ST-XQ-Sr6" customClass="CustomTextField" customModule="Valigator2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="189" width="374" height="43"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O70-Yr-rkB">
+                                <rect key="frame" x="173.5" y="363" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dtN-aC-WMG" customClass="CustomTextField" customModule="Valigator2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="257" width="374" height="43"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6ST-XQ-Sr6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2k1-w7-zkU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ST-XQ-Sr6" secondAttribute="trailing" constant="20" id="Beg-yg-hoX"/>
+                            <constraint firstItem="dtN-aC-WMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bjq-64-zbw"/>
+                            <constraint firstItem="O70-Yr-rkB" firstAttribute="top" secondItem="dtN-aC-WMG" secondAttribute="bottom" constant="63" id="GTz-7A-4LD"/>
+                            <constraint firstItem="dtN-aC-WMG" firstAttribute="top" secondItem="6ST-XQ-Sr6" secondAttribute="bottom" constant="25" id="Q80-rx-m44"/>
+                            <constraint firstItem="naL-3t-qLt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="TAL-gd-XmI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dtN-aC-WMG" secondAttribute="trailing" constant="20" id="b8E-Ee-9li"/>
+                            <constraint firstItem="naL-3t-qLt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f6c-ZQ-Dlo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="naL-3t-qLt" secondAttribute="trailing" constant="20" id="igY-rb-g4v"/>
+                            <constraint firstItem="6ST-XQ-Sr6" firstAttribute="top" secondItem="naL-3t-qLt" secondAttribute="bottom" constant="23" id="oow-tq-5Yc"/>
+                            <constraint firstItem="O70-Yr-rkB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zvj-Nt-1jN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="O70-Yr-rkB" id="4Lv-Kb-JaH"/>
+                        <outlet property="textField1" destination="naL-3t-qLt" id="SgY-YN-4WP"/>
+                        <outlet property="textField2" destination="6ST-XQ-Sr6" id="vvi-xs-XcJ"/>
+                        <outlet property="textField3" destination="dtN-aC-WMG" id="xAa-KY-XRA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
